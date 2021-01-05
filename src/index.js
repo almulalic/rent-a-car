@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Layout, Menu } from 'antd';
+import { UserOutlined, LoginOutlined, PhoneOutlined } from '@ant-design/icons';
+
+
+const { Header, Content, Footer } = Layout;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <Layout className="layout">
+    <Header>
+      <div className="logo"><h1>Logo<span>Go</span></h1></div>
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        <Menu.Item key="1"><UserOutlined />My bookings</Menu.Item>
+        <Menu.Item key="2"><LoginOutlined />SignIn/SignUp</Menu.Item>
+        <Menu.Item key="3">Language</Menu.Item>
+        <Menu.Item key="3"><PhoneOutlined />Call Us</Menu.Item>
+      </Menu>
+    </Header>
+    <Content>
+      <div className="site-layout-content">
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+      </div>
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+  </Layout>,
+  document.getElementById('root'),
+);
