@@ -48,11 +48,14 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: rgba(0, 0, 0, 0);
+  color: yellow;
+
 }
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-active {
   background-color: rgba(0, 0, 0, 0);
 }
+
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
   color: yellow;
   background-color: rgba(0, 0, 0, 0);
