@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./FormHome.css";
 import { Row, Col, DatePicker, Space, Select, Button } from "antd";
 
@@ -21,7 +20,7 @@ class FormHome extends React.Component {
           <Col span={12}>
             <Select
               showSearch
-              style={{ width: 100 +"%" }}
+              style={{ width: 100 + "%" }}
               placeholder="Car type"
               optionFilterProp="children"
             >
@@ -31,12 +30,7 @@ class FormHome extends React.Component {
             </Select>
           </Col>
           <Col span={12}>
-            <Select
-              showSearch
-              style={{ width: 100 +"%" }}
-              placeholder="City"
-              optionFilterProp="children"
-            >
+            <Select showSearch style={{ width: 100 + "%" }} placeholder="City" optionFilterProp="children">
               <Option value="sarajevo">Sarajevo</Option>
               <Option value="tuzla">Tuzla</Option>
               <Option value="mostar">Mostar</Option>
@@ -52,10 +46,10 @@ class FormHome extends React.Component {
           </Col>
         </Row>
         <Row id="body3">
-        <Col span={24}>
-          <Button id="btn" type="primary" size="large">
-            More
-          </Button>
+          <Col span={24}>
+            <Button id="btn" type="primary" size="large">
+              More
+            </Button>
           </Col>
         </Row>
       </div>
