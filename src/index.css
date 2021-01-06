@@ -30,7 +30,7 @@ code {
 }
 
 .logo h1 span {
-  color: yellow;
+  color: #ffbf00;
 }
 
 .ant-row-rtl .logo {
@@ -49,7 +49,7 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: rgba(0, 0, 0, 0);
-  color: yellow;
+  color: #ffbf00;
 
 }
 
@@ -58,7 +58,7 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
 }
 
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
-  color: yellow;
+  color: #ffbf00;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -75,6 +75,7 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
   color: rgba(0, 0, 0, 0.85);
   line-height: 64px;
   background: rgba(1, 1, 1, 0);
+  z-index: 100000;
 }
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item, .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
   top: 0;
@@ -89,4 +90,16 @@ span.anticon.anticon {
 
 li.ant-menu-item {
   font-size: 15px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .site-layout-content {
+    height: 42rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .site-layout-content {
+    height: 31rem;
+  }
 }

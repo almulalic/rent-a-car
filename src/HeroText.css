@@ -5,20 +5,20 @@
 
 .heroText .yellow {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 10%;
+  margin-top: 30%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 0;
 }
 
 .heroText .white {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 40px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 40px;
+}
 
 .heroText h2 {
   font-size: 25px;
@@ -28,7 +28,7 @@
 }
 
 .yellow {
-  color: yellow;
+  color: #ffbf00;
 }
 
 .white {
@@ -40,8 +40,39 @@ h2 {
 }
 
 .heroText img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1800px) {
+  .heroText img {
+    margin-top: 10%;
   }
+}
+
+@media only screen and (max-width: 1799px) {
+  .heroText img {
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .heroText img {
+    margin-top: 25%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroText .yellow {
+    font-size: 25px;
+  }
+  .heroText .white {
+    font-size: 30px;
+  }
+  .heroText h2 {
+    font-size: 20px;
+  }
+}
