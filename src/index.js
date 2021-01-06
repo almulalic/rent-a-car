@@ -1,5 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+<<<<<<< HEAD
+import "./index.css";
+import App from "./App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+=======
 import "antd/dist/antd.css";
 import "./index.css";
 import { Row, Col, BackTop, Layout, Menu } from "antd";
@@ -65,5 +74,6 @@ ReactDOM.render(
       <div style={style}><UpOutlined /></div>
     </BackTop>
   </Layout>,
+>>>>>>> b4363ff2bb196d74baf946aa47d8388661c46c8f
   document.getElementById("root")
 );
