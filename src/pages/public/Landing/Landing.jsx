@@ -1,6 +1,11 @@
 // import { Layout, Menu } from "antd";
-import { Row, Col, BackTop, Layout, Menu } from "antd";
-import { UserOutlined, LoginOutlined, PhoneOutlined, UpOutlined } from "@ant-design/icons";
+import { Row, Col, BackTop, Layout, Menu, Footer } from "antd";
+import {
+  UserOutlined,
+  LoginOutlined,
+  PhoneOutlined,
+  UpOutlined,
+} from "@ant-design/icons";
 import React from "react";
 import HeroText from "./Components/HeroText";
 import RentDiv from "./Components/RentDiv";
@@ -53,7 +58,15 @@ export const Landing = () => {
           <UpOutlined />
         </div>
       </BackTop>
-      <OurCars/>
+      <OurCars />
+      <Row>
+        <Col span={24}>
+          <Footer style={{ textAlign: "center" }}>
+            Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir
+            Mulalic
+          </Footer>
+        </Col>
+      </Row>
     </Layout>
   );
 };

@@ -4,7 +4,7 @@ import car1 from "../../../../images/car1.png";
 import car2 from "../../../../images/car2.png";
 import car3 from "../../../../images/car3.png";
 
-import { Row, Col, Carousel, Card } from "antd";
+import { Row, Col, Card } from "antd";
 
 const { Meta } = Card;
 
@@ -62,7 +62,7 @@ class OurCars extends React.Component {
               style={{ width: "100%", backgroundColor: "#ffbf00" }}
               cover={<img alt="example" src={car3} />}
             >
-             <h4>Hatchback Class</h4>
+              <h4>Hatchback Class</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 quam velit, vulputate eu.

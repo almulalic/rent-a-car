@@ -1,14 +1,3 @@
-/* .site-layout-outline {
-  height: 40;
-  width: 40;
-  line-height: "40px";
-  border-radius: 0;
-  background-color: "black";
-  color: "#fff";
-  text-align: "center";
-  font-size: 14;
-} */
-
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -113,4 +102,14 @@ li.ant-menu-item {
   .site-layout-content {
     height: 31rem;
   }
+}
+.site-layout-outline {
+  height: 40;
+  width: 40;
+  line-height: "40px";
+  border-radius: 0;
+  background-color: "black";
+  color: "#fff";
+  text-align: "center";
+  font-size: 14;
 }
