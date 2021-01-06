@@ -8,7 +8,6 @@ import { UserOutlined, LoginOutlined, PhoneOutlined } from "@ant-design/icons";
 import HeroText from "./HeroText";
 import RentDiv from "./RentDiv";
 
-
 const { Header, Content, Footer } = Layout;
 
 ReactDOM.render(

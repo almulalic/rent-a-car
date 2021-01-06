@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./RentDiv.css";
 import { Row, Col, Button } from "antd";
+import FormHome from "./FormHome";
 
 class RentDiv extends React.Component {
   render() {
@@ -32,7 +33,7 @@ class RentDiv extends React.Component {
             </div>
           </Col>
           <Col xs={25} md={12} lg={12}>
-            col
+            <FormHome/>
           </Col>
         </Row>
       </div>

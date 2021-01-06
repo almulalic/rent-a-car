@@ -1,0 +1,23 @@
+.formHome h1{
+    color: white;
+    padding: 3% 5%;
+    margin: 0;
+}
+
+.formHome h1 span{
+    color: #ffbf00;
+}
+
+.formHome{
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+}
+
+#head{
+    background-color: black;
+}
+#body{
+    background-color: white;
+    height: auto;
+}

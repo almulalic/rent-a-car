@@ -21,6 +21,7 @@
 
 button.ant-btn.ant-btn-primary{
     width: 15%;
+    border-color: black;
     background-color: black;
 }
 
