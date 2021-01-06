@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./index.css";
 import { Layout, Menu } from "antd";
+import { Row, Col } from "antd";
 import { UserOutlined, LoginOutlined, PhoneOutlined } from "@ant-design/icons";
 import HeroText from "./HeroText";
-import { Row, Col } from "antd";
+import RentDiv from "./RentDiv";
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -46,6 +48,7 @@ ReactDOM.render(
         <HeroText />
       </div>
     </Content>
+    <RentDiv/>
   </Layout>,
   document.getElementById("root")
 );
