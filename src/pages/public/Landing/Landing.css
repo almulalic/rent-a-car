@@ -1,0 +1,10 @@
+.site-layout-outline {
+  height: 40;
+  width: 40;
+  line-height: "40px";
+  border-radius: 0;
+  background-color: "black";
+  color: "#fff";
+  text-align: "center";
+  font-size: 14;
+}

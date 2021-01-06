@@ -5,7 +5,8 @@ import RestrictedRoute from "./RestrictedRoute";
 
 import createHistory from "history/createBrowserHistory";
 import { PermissionType } from "../shared/types";
-import { Dashboard, ProfileDashboard } from "../pages";
+import { Dashboard } from "../pages/administrator";
+import { ProfileDashboard, Order } from "../pages/customer";
 
 const Routes = (props: any) => {
   const history = createHistory();
@@ -26,6 +27,13 @@ const Routes = (props: any) => {
           title="Profile Dashboard"
           path="/profile"
           component={ProfileDashboard}
+        />
+        <RestrictedRoute
+          permission={[PermissionType.Customer]}
+          exact
+          title="Order"
+          path="/order"
+          component={Order}
         />
       </Switch>
     </div>

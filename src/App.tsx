@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./App.css";
 import "antd/dist/antd.css";
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
-import { Contact, Landing, LogIn, SingUp } from "./pages";
+
 import Routes from "./routes/Routes";
+import { Contact, Landing, LogIn, SingUp } from "./pages/public";
 
 function App() {
   return (

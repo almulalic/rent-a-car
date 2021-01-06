@@ -4,7 +4,7 @@ import { PermissionType } from "../shared/types";
 
 interface ICustomRouteProps {
   permission: PermissionType[];
-  title?: string;
+  title: string;
   exact?: boolean;
   path?: string | string[];
   component?: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
@@ -16,6 +16,8 @@ export default function CustomRoute({ permission, title, ...rest }: ICustomRoute
   if (!permission.includes(permissionType)) {
     return <Redirect to="login" />;
   }
+
+  document.title = title;
 
   return <Route {...rest} />;
 }
