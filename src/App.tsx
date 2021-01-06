@@ -6,16 +6,36 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-d
 
 import Routes from "./routes/Routes";
 import { Contact, Landing, LogIn, SingUp } from "./pages/public";
+import CustomRoute from "./routes/CustomRoute";
+import { PermissionType } from "./shared/types";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/contact" component={Contact} title="Contact" />
-        <Route exact path="/landing" component={Landing} title="Landing" />
-        <Route exact path="/login" component={LogIn} title="Log In" />
-        <Route exact path="/singup" component={SingUp} title="Sing Up" />
-        <Route exact path="/" component={Landing} title="Landing" />
+        <CustomRoute
+          permission={[PermissionType.All]}
+          exact
+          path="/contact"
+          component={Contact}
+          title="Contact"
+        />
+        <CustomRoute
+          permission={[PermissionType.All]}
+          exact
+          path="/landing"
+          component={Landing}
+          title="Landing"
+        />
+        <CustomRoute permission={[PermissionType.All]} exact path="/login" component={LogIn} title="Log In" />
+        <CustomRoute
+          permission={[PermissionType.All]}
+          exact
+          path="/singup"
+          component={SingUp}
+          title="Sing Up"
+        />
+        <CustomRoute permission={[PermissionType.All]} exact path="/" component={Landing} title="Landing" />
         <Route exact path="" component={Routes} />
       </Switch>
     </Router>
