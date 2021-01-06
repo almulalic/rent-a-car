@@ -2,13 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./index.css";
-import { Layout, Menu } from "antd";
-import { Row, Col } from "antd";
-import { UserOutlined, LoginOutlined, PhoneOutlined } from "@ant-design/icons";
+// import { Layout, Menu } from "antd";
+import { Row, Col, BackTop, Layout, Menu } from "antd";
+import { UserOutlined, LoginOutlined, PhoneOutlined, UpOutlined } from "@ant-design/icons";
 import HeroText from "./HeroText";
 import RentDiv from "./RentDiv";
 
 const { Header, Content, Footer } = Layout;
+
+const style = {
+  height: 40,
+  width: 40,
+  lineHeight: '40px',
+  borderRadius: 0,
+  backgroundColor: 'black',
+  color: '#fff',
+  textAlign: 'center',
+  fontSize: 14,
+};
+
 
 ReactDOM.render(
   <Layout className="layout">
@@ -48,6 +60,9 @@ ReactDOM.render(
       </div>
     </Content>
     <RentDiv/>
+    <BackTop>
+      <div style={style}><UpOutlined /></div>
+    </BackTop>
   </Layout>,
   document.getElementById("root")
 );
