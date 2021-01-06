@@ -1,8 +1,8 @@
 import React from "react";
 import "./OurCars.css";
-import car1 from "./images/car1.png";
-import car2 from "./images/car2.png";
-import car3 from "./images/car3.png";
+import car1 from "../../../../images/car1.png";
+import car2 from "../../../../images/car2.png";
+import car3 from "../../../../images/car3.png";
 
 import { Row, Col, Carousel, Card } from "antd";
 

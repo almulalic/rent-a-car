@@ -4,6 +4,8 @@ import { UserOutlined, LoginOutlined, PhoneOutlined, UpOutlined } from "@ant-des
 import React from "react";
 import HeroText from "./Components/HeroText";
 import RentDiv from "./Components/RentDiv";
+import OurCars from "./Components/OurCars";
+import "./Landing.css";
 
 export const Landing = () => {
   const { Header, Content, Footer } = Layout;
@@ -51,6 +53,7 @@ export const Landing = () => {
           <UpOutlined />
         </div>
       </BackTop>
+      <OurCars/>
     </Layout>
   );
 };
