@@ -32,7 +32,8 @@ class RentDiv extends React.Component {
               </Button>
             </div>
           </Col>
-          <Col xs={25} md={12} lg={12}>
+          <Col id="nevid" lg={2}>s</Col>
+          <Col xs={24} md={12} lg={10}>
             <FormHome/>
           </Col>
         </Row>

@@ -21,7 +21,7 @@ class FormHome extends React.Component {
           <Col span={12}>
             <Select
               showSearch
-              style={{ width: 200 }}
+              style={{ width: 100 +"%" }}
               placeholder="Car type"
               optionFilterProp="children"
             >
@@ -33,8 +33,8 @@ class FormHome extends React.Component {
           <Col span={12}>
             <Select
               showSearch
-              style={{ width: 200 }}
-              placeholder="Car type"
+              style={{ width: 100 +"%" }}
+              placeholder="City"
               optionFilterProp="children"
             >
               <Option value="sarajevo">Sarajevo</Option>
