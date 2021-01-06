@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./HeroText.css";
 import image from "./images/audi.png";
 import { Row, Col } from "antd";

@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./index.css";
-// import { Layout, Menu } from "antd";
 import { Row, Col, BackTop, Layout, Menu } from "antd";
 import { UserOutlined, LoginOutlined, PhoneOutlined, UpOutlined } from "@ant-design/icons";
 import HeroText from "./HeroText";
 import RentDiv from "./RentDiv";
+import OurCars from "./OurCars";
 
 const { Header, Content, Footer } = Layout;
 
@@ -60,6 +60,7 @@ ReactDOM.render(
       </div>
     </Content>
     <RentDiv/>
+    <OurCars/>
     <BackTop>
       <div style={style}><UpOutlined /></div>
     </BackTop>
