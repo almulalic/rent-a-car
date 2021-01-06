@@ -1,13 +1,105 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+}
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  /* margin: 16px 24px 16px 0; */
+  /* background: rgba(255, 255, 255, 0.3); */
+}
+.logo h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.logo h1 span {
+  color: #ffbf00;
+}
+
+.ant-row-rtl .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+[data-theme="dark"] .site-layout-content {
+  background: #141414;
+}
+
+ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
+  float: right;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffbf00;
+
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+  color: #ffbf00;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.site-layout-content {
+  background-image: url("images/bacgroundImage.png");
+  height: 45rem;
+}
+
+.ant-layout-header {
+  height: 64px;
+  width: 100%;
+  padding: 0 50px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 64px;
+  background: rgba(1, 1, 1, 0);
+  z-index: 100000;
+}
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item, .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
+  top: 0;
+  margin-top: 0;
+  padding: 5px 20px;
+  color: rgb(199, 198, 198);
+}
+
+span.anticon.anticon {
+  font-size: 18px;
+}
+
+li.ant-menu-item {
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .site-layout-content {
+    height: 42rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .site-layout-content {
+    height: 31rem;
+  }
 }
