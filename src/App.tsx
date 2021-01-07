@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
 import Routes from "./routes/Routes";
-import { Contact, Landing, LogIn, SingUp } from "./pages/public";
+import { Contact, Landing, LogIn, SingUp, Order } from "./pages/public";
 import CustomRoute from "./routes/CustomRoute";
 import { PermissionType } from "./shared/types";
 
@@ -36,6 +36,7 @@ function App() {
           title="Sing Up"
         />
         <CustomRoute permission={[PermissionType.All]} exact path="/" component={Landing} title="Landing" />
+        <CustomRoute permission={[PermissionType.All]} exact title="Order" path="/order" component={Order} />
         <Route exact path="" component={Routes} />
       </Switch>
     </Router>

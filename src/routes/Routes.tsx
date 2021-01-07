@@ -1,17 +1,13 @@
 import React from "react";
 
-import { Route, Switch } from "react-router-dom";
-import RestrictedRoute from "./CustomRoute";
+import { Switch } from "react-router-dom";
 
-import createHistory from "history/createBrowserHistory";
 import { PermissionType } from "../shared/types";
 import { Dashboard } from "../pages/administrator";
-import { ProfileDashboard, Order } from "../pages/customer";
 import CustomRoute from "./CustomRoute";
+import { ProfileDashboard } from "../pages/customer";
 
-const Routes = (props: any) => {
-  const history = createHistory();
-
+const Routes = () => {
   return (
     <div className="Content-wrap">
       <Switch>
@@ -28,13 +24,6 @@ const Routes = (props: any) => {
           title="Profile Dashboard"
           path="/profile"
           component={ProfileDashboard}
-        />
-        <CustomRoute
-          permission={[PermissionType.Customer]}
-          exact
-          title="Order"
-          path="/order"
-          component={Order}
         />
       </Switch>
     </div>

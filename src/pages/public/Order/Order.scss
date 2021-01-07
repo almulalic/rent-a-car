@@ -1,0 +1,60 @@
+.Order-FormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.Order-StepsContainer {
+  background: #141414;
+  color: white;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-top: 10em;
+
+  .ant-steps-item-description {
+    max-width: 250px !important;
+    width: 250px !important;
+  }
+
+  .ant-steps-item-container {
+    margin-bottom: 1vh;
+  }
+
+  .ant-steps-item-icon {
+    color: white !important;
+  }
+
+  i,
+  svg {
+    color: white !important;
+    height: 24px;
+    width: 24px;
+    margin: 5px;
+  }
+}
+
+.Step-Title {
+  color: white !important;
+}
+
+.Step-FS-Icon {
+  color: white !important;
+}
+
+.Step-Description {
+  color: white !important;
+  max-width: 1000px !important;
+  width: 10000px !important;
+}
+
+.Order-ContentContainer {
+  background-color: #ffbf00;
+  height: 100%;
+}
+
+.site-navigation-steps,
+.site-navigation-steps {
+  margin-bottom: 60px;
+  box-shadow: 0px -1px 0 0 #e8e8e8 inset;
+}

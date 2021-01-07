@@ -1,0 +1,45 @@
+.Step-Icon-Container {
+  position: relative;
+  margin-right: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .Step-Icon-Background {
+    font-size: 38px;
+    height: 38px !important;
+    width: 38px !important;
+    color: white !important;
+  }
+
+  .Step-Icon {
+    position: absolute;
+    width: 38px !important;
+    padding: 2px;
+    font-size: 20px;
+    z-index: 10;
+    color: black !important;
+  }
+}
+
+.Step-Disabled {
+  h4,
+  span,
+  .Step-Icon-Background {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+.Step-Active {
+  h4,
+  span,
+  .Step-Icon-Background {
+    color: #ffbf00 !important;
+  }
+}
+
+.Step-Finished {
+  color: white !important;
+}

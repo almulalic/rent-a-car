@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Bosnia & Herzegovina",
+    "code": "BA",
+    "phonePrefixes": ["BA"]
+  },
+  {
+    "name": "Croatia",
+    "code": "CRO",
+    "phonePrefixes": ["CRO", "CRO"]
+  },
+  {
+    "name": "Serbia",
+    "code": "SRB",
+    "phonePrefixes": ["SRB", "SRB", "SRB"]
+  },
+  {
+    "name": "Montenegro",
+    "code": "MNE",
+    "phonePrefixes": ["MNE", "MNE", "MNE", "MNE"]
+  },
+  {
+    "name": "United States of America",
+    "code": "USA",
+    "phonePrefixes": ["USA", "USA", "USA", "USA", "USA"]
+  }
+]

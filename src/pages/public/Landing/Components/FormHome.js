@@ -47,7 +47,7 @@ class FormHome extends React.Component {
         </Row>
         <Row id="body3">
           <Col span={24}>
-            <Button id="btn" type="primary" size="large">
+            <Button id="btn" type="primary" size="large" href="/order">
               More
             </Button>
           </Col>
