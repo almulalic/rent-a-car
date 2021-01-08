@@ -77,6 +77,7 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
   background: rgba(1, 1, 1, 0);
   z-index: 100000;
 }
+
 .ant-menu-dark.ant-menu-horizontal > .ant-menu-item, .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
   top: 0;
   margin-top: 0;
