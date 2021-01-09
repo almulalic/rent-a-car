@@ -5,7 +5,7 @@ import { Navbar } from "../../../components/Navbar/Navbar";
 import { StepWizard } from "./components/StepWizard/StepWizard";
 
 import { DriverAndPaymentForm } from "./components/DriverAndPaymentForm/DriverAndPaymentForm";
-
+import { SearchCar } from "./components/SearchCar/SearchCar";
 import "./Order.scss";
 
 export const Order = () => {
@@ -19,7 +19,8 @@ export const Order = () => {
       <Content>
         <StepWizard />
         <div className="Order-ContentContainer">
-          <DriverAndPaymentForm />
+          {/* <DriverAndPaymentForm /> */}
+          <SearchCar/>
         </div>
       </Content>
     </Layout>
