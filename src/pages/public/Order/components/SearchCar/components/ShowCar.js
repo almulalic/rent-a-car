@@ -6,6 +6,7 @@ let cars = require("../carInfo.json");
 
 function handleChange() {
   console.log(cars.length);
+//   ShowCar();
 }
 
 export const ShowCar = () => {
