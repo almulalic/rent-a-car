@@ -1,0 +1,147 @@
+[
+    {
+      "manufacturer": "Volkswagen",
+      "name": "Arteon",
+      "transmission": "manual",
+      "doors": 4,
+      "seats": 5,
+      "fuel": "diesel",
+      "img": "https://i.ibb.co/PTB1bZq/arteon-removebg-preview.png"
+    },
+    {
+        "manufacturer": "Volkswagen",
+        "name": "Passat",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/Volkswagen-Passat.png"
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Golf",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/vqdzMZ0/golf6.png"
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Arteon",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://i.ibb.co/PTB1bZq/arteon-removebg-preview.png"
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Passat",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/Volkswagen-Passat.png"
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Golf",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/vqdzMZ0/golf6.png"
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a4",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://www.motortrend.com/uploads/sites/10/2015/11/2011-audi-s4-3.0-t-quattro-manual-premium-plus-sedan-angular-front.png"
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a4",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://www.motortrend.com/uploads/sites/10/2015/11/2011-audi-s4-3.0-t-quattro-manual-premium-plus-sedan-angular-front.png"
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a3",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/gWnJsdT/audia3.png"
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a5",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/kgMRz0N/audia5-removebg-preview.png"
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "C320",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://i.ibb.co/bRpGV3z/mercedesc320-removebg-preview.png"
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "C300",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://i.ibb.co/8gBbry6/mercedesc300-removebg-preview.png"
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "E220",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://i.ibb.co/c2563Wz/mercedese220-removebg-preview.png"
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M3",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/MVC2GfV/m3-removebg-preview.png"
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M5",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": "https://i.ibb.co/VptGJx6/m5-removebg-preview.png"
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M3",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": "https://i.ibb.co/MVC2GfV/m3-removebg-preview.png"
+      }
+  ]
+  

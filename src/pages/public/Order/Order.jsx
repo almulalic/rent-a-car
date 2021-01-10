@@ -5,7 +5,7 @@ import { Navbar } from "../../../components/Navbar/Navbar";
 import { StepWizard } from "./components/StepWizard/StepWizard";
 
 import { DriverAndPaymentForm } from "./components/DriverAndPaymentForm/DriverAndPaymentForm";
-
+import { SearchCar } from "./components/SearchCar/SearchCar";
 import "./Order.scss";
 
 export const Order = () => {
@@ -17,14 +17,10 @@ export const Order = () => {
         <Navbar /> // Glavni navbar
       </Header>
       <Content>
-        <StepWizard /> // Step by step navbar 
+        <StepWizard /> // Step by step navbar
         <div className="Order-ContentContainer">
-          {
-            if(currentPage == 1) 
-            return <TvojaKomponentaZaSearch/>
-            else if(currentPage == 2) 
-            return <DriverAndPaymentForm />
-          }
+          {/* <DriverAndPaymentForm /> */}
+          <SearchCar />
         </div>
       </Content>
     </Layout>

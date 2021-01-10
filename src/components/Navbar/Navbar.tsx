@@ -1,9 +1,13 @@
 import { UserOutlined, LoginOutlined, PhoneOutlined } from "@ant-design/icons";
-import { Row, Col, Menu } from "antd";
+import { Row, Col, Menu, Layout } from "antd";
 import React from "react";
 
+const { Header  } = Layout;
+
 export const Navbar = () => {
+ 
   return (
+    <Header>
     <Row gutter={[16, 24]}>
       <Col span={12}>
         <div className="logo">
@@ -32,5 +36,6 @@ export const Navbar = () => {
         </Menu>
       </Col>
     </Row>
+  </Header>
   );
 };

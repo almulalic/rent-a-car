@@ -1,0 +1,82 @@
+import React from "react";
+import "./ShowCar.css";
+import { Row, Col, Button } from "antd";
+
+let cars = require("../carInfo.json");
+
+function handleChange() {
+  console.log(cars.length);
+}
+
+export const ShowCar = () => {
+  return cars.map((car) => (
+    <div className="showCar2" onClick={handleChange()}>
+      <Row>
+        <Col xs={8} md={8} lg={8}>
+          <img src={car.img} alt="car" />
+        </Col>
+        <Col xs={8} md={8} lg={8}>
+          <div className="specs">
+            <Row>
+              <Col xs={1} md={1} lg={1}></Col>
+              <Col xs={23} md={23} lg={23}>
+                <h1>
+                  {" "}
+                  {car.manufacturer} {car.name}{" "}
+                </h1>
+              </Col>
+            </Row>
+            <Row className="rowic">
+              <Col xs={1} md={1} lg={1}></Col>
+              <Col xs={4} md={4} lg={4}>
+                <div className="specs2">{car.transmission}</div>
+              </Col>
+              <Col xs={2} md={2} lg={2}></Col>
+              <Col xs={4} md={4} lg={4}>
+                <div className="specs2">{car.doors} doors</div>
+              </Col>
+              <Col xs={2} md={2} lg={2}></Col>
+              <Col xs={4} md={4} lg={4}>
+                <div className="specs2">{car.seats} seats</div>
+              </Col>
+              <Col xs={2} md={2} lg={2}></Col>
+              <Col xs={4} md={4} lg={4}>
+                <div className="specs2">{car.fuel}</div>
+              </Col>
+              <Col xs={1} md={1} lg={1}></Col>
+            </Row>
+            <Row>
+              <ul>
+                <li>Unlimited kilometers</li>
+                <li>Pickup Full & Return Full</li>
+                <li>Snow Chains included</li>
+                <li>Value Added Tax (VAT)</li>
+              </ul>
+            </Row>
+          </div>
+        </Col>
+        <Col xs={1} md={1} lg={1}>
+
+        </Col>
+        <Col xs={6} md={6} lg={6}>
+          <Row className="bookNow">
+            <Col xs={2} md={2} lg={2}></Col>
+            <Col xs={10} md={10} lg={10}>
+              {" "}
+              <h1>$25 / Day</h1>
+            </Col>
+            <Col xs={10} md={10} lg={10}>
+              <Button id="btn2" type="primary" size="large" href="/order">
+                Book Now
+              </Button>
+            </Col>
+            <Col xs={2} md={2} lg={2}></Col>
+          </Row>
+        </Col>
+        <Col xs={1} md={1} lg={1}>
+
+        </Col>
+      </Row>
+    </div>
+  ));
+};

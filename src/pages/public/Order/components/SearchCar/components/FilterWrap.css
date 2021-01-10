@@ -1,0 +1,35 @@
+.filterWrap {
+  background-color: #141414;
+  width: 90%;
+  height: 5rem;
+  margin: 0 auto;
+  top: 2rem;
+  padding: 10px;
+  position: relative;
+}
+
+.childWrap {
+  width: 100%; /*full width*/
+  height: 100%;
+  display: table; /*acts like a table*/
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.childWrap h1 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle; /*middle centred*/
+  display: table-cell; /*acts like a table cell*/
+}
+
+.selectTag{
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 1rem;
+}
+
+span.ant-select-selection-placeholder {
+    font-weight: 500;
+    color: darkgray;
+}
