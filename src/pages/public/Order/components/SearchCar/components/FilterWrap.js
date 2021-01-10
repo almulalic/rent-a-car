@@ -14,6 +14,7 @@ export const FilterWrap = () => {
       <div className="childWrap">
         <h1>Filters: </h1>
         <Select
+          className="selectTag"
           placeholder="Transmission type"
           style={{ width: 20 + "%" }}
           onChange={handleChange}
@@ -24,6 +25,7 @@ export const FilterWrap = () => {
         </Select>
 
         <Select
+          className="selectTag"
           placeholder="Fuel type"
           style={{ width: 20 + "%" }}
           onChange={handleChange}
@@ -34,6 +36,7 @@ export const FilterWrap = () => {
         </Select>
 
         <Select
+          className="selectTag"
           placeholder="Doors"
           style={{ width: 20 + "%" }}
           onChange={handleChange}
@@ -44,7 +47,8 @@ export const FilterWrap = () => {
         </Select>
 
         <Select
-           placeholder="Number of seats"
+          className="selectTag"
+          placeholder="Number of seats"
           style={{ width: 20 + "%" }}
           onChange={handleChange}
           id="select"
