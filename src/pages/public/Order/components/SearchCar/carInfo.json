@@ -1,0 +1,147 @@
+[
+    {
+      "manufacturer": "Volkswagen",
+      "name": "Arteon",
+      "transmission": "manual",
+      "doors": 4,
+      "seats": 5,
+      "fuel": "diesel",
+      "img": ""
+    },
+    {
+        "manufacturer": "Volkswagen",
+        "name": "Passat",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Golf",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Arteon",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Passat",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "Volkswagen",
+        "name": "Golf",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a4",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a4",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a3",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Audi",
+        "name": "a5",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "C320",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "C300",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "Mercedes",
+        "name": "E220",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M3",
+        "transmission": "automatic",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M5",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "diesel",
+        "img": ""
+      },
+      {
+        "manufacturer": "BMW",
+        "name": "M3",
+        "transmission": "manual",
+        "doors": 4,
+        "seats": 5,
+        "fuel": "petrol",
+        "img": ""
+      }
+  ]
+  
