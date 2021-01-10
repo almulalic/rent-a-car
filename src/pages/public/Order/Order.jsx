@@ -14,12 +14,17 @@ export const Order = () => {
   return (
     <Layout className="Order-FormContainer">
       <Header>
-        <Navbar />
+        <Navbar /> // Glavni navbar
       </Header>
       <Content>
-        <StepWizard />
+        <StepWizard /> // Step by step navbar 
         <div className="Order-ContentContainer">
-          <DriverAndPaymentForm />
+          {
+            if(currentPage == 1) 
+            return <TvojaKomponentaZaSearch/>
+            else if(currentPage == 2) 
+            return <DriverAndPaymentForm />
+          }
         </div>
       </Content>
     </Layout>
