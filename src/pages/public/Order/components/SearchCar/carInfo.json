@@ -1,14 +1,5 @@
 [
     {
-      "manufacturer": "Volkswagen",
-      "name": "Arteon",
-      "transmission": "manual",
-      "doors": 4,
-      "seats": 5,
-      "fuel": "diesel",
-      "img": "https://i.ibb.co/PTB1bZq/arteon-removebg-preview.png"
-    },
-    {
         "manufacturer": "Volkswagen",
         "name": "Passat",
         "transmission": "manual",

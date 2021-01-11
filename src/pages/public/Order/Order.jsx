@@ -13,9 +13,7 @@ export const Order = () => {
 
   return (
     <Layout className="Order-FormContainer">
-      <Header>
         <Navbar />
-      </Header>
       <Content>
         <StepWizard />
         <div className="Order-ContentContainer">

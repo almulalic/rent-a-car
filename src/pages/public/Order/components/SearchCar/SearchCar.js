@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import "./SearchCar.css";
-// import { Row, Col, Button } from "antd";
+// import { Row, Col } from "antd";
 import { FilterWrap } from "./components/FilterWrap";
 import { ShowCar } from "./components/ShowCar";
 
@@ -12,6 +12,7 @@ export const SearchCar = () => {
     seats: "",
   });
 
+  
   return (
     <div className="searchCar">
       <FilterWrap filter={state} setFilter={setState} />
