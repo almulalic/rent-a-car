@@ -6,11 +6,9 @@ import { StepContext } from "../../OrderContext";
 import "../../Order.scss";
 import "./StepWizard.scss";
 
-export const StepWizard = () => {
+export const StepWizard = ({ currentStep, setCurrentStep }) => {
   const { Title, Text } = Typography;
   const { Step } = Steps;
-
-  const [currentStep, setCurrentStep] = useState(0);
 
   const getStepClass = (_index) => {
     return currentStep === _index ? "Active" : _index > currentStep ? "Disabled" : "Finished";
@@ -47,7 +45,7 @@ export const StepWizard = () => {
         <Step
           className="Step"
           type="navigation"
-          status="wait"
+          status={currentStep <= 0 ? "wait" : "finish"}
           className={`site-navigation-steps Step-${getStepClass(0)}`}
           title={renderTitle("Search")}
           description={renderDescription("Search, filter and choose a vehicle")}
@@ -58,7 +56,7 @@ export const StepWizard = () => {
         <Step
           className="Step"
           type="navigation"
-          status="wait"
+          status={currentStep <= 1 ? "wait" : "finish"}
           className={`site-navigation-steps Step-${getStepClass(1)}`}
           title={renderTitle("Vehicle Details")}
           description={renderDescription("Review selected vehicle")}
@@ -69,7 +67,7 @@ export const StepWizard = () => {
         <Step
           className="Step"
           type="navigation"
-          status="wait"
+          status={currentStep <= 2 ? "wait" : "finish"}
           className={`site-navigation-steps Step-${getStepClass(2)}`}
           title={renderTitle("Confirm Order")}
           description={renderDescription("Check if all looks good")}
@@ -80,7 +78,7 @@ export const StepWizard = () => {
         <Step
           className="Step"
           type="navigation"
-          status="wait"
+          status={currentStep <= 3 ? "wait" : "finish"}
           className={`site-navigation-steps Step-${getStepClass(3)}`}
           title={renderTitle("Personal Info & Payment")}
           description={renderDescription("Enter your details and payment info")}

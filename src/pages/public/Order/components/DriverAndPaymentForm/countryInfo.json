@@ -7,21 +7,21 @@
   {
     "name": "Croatia",
     "code": "CRO",
-    "phonePrefixes": ["CRO", "CRO"]
+    "phonePrefixes": ["CRO1", "CRO2"]
   },
   {
     "name": "Serbia",
     "code": "SRB",
-    "phonePrefixes": ["SRB", "SRB", "SRB"]
+    "phonePrefixes": ["SRB1", "SRB2", "SRB3"]
   },
   {
     "name": "Montenegro",
     "code": "MNE",
-    "phonePrefixes": ["MNE", "MNE", "MNE", "MNE"]
+    "phonePrefixes": ["MNE4", "MNE5", "MNE6", "MNE7"]
   },
   {
-    "name": "United States of America",
-    "code": "USA",
-    "phonePrefixes": ["USA", "USA", "USA", "USA", "USA"]
+    "name": "Englend",
+    "code": "ENG",
+    "phonePrefixes": ["ENG1", "ENG2", "ENG3", "ENG4", "ENG5"]
   }
 ]

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Layout } from "antd";
 
 import { Navbar } from "../../../components/Navbar/Navbar";
@@ -6,23 +6,26 @@ import { StepWizard } from "./components/StepWizard/StepWizard";
 
 import { DriverAndPaymentForm } from "./components/DriverAndPaymentForm/DriverAndPaymentForm";
 import { SearchCar } from "./components/SearchCar/SearchCar";
+
 import "./Order.scss";
+import { PersonalizedFooter } from "./../../../components/Footer/Footer";
 
 export const Order = () => {
   const { Header, Content } = Layout;
+  const [currentStep, setCurrentStep] = useState(0);
 
   return (
     <Layout className="Order-FormContainer">
       <Header>
-        <Navbar /> // Glavni navbar
+        <Navbar />
       </Header>
       <Content>
-        <StepWizard /> // Step by step navbar
+        <StepWizard currentStep={currentStep} setCurrentStep={setCurrentStep} />
         <div className="Order-ContentContainer">
-          {/* <DriverAndPaymentForm /> */}
-          <SearchCar />
+          {currentStep == 0 ? <DriverAndPaymentForm /> : <SearchCar />}
         </div>
       </Content>
+      <PersonalizedFooter />
     </Layout>
   );
 };
