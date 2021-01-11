@@ -4,13 +4,32 @@ import { Row, Col, Button } from "antd";
 
 let cars = require("../carInfo.json");
 
-function handleChange() {
-  console.log(cars.length);
-}
+export const ShowCar = (props) => {
+  console.log(
+    props.filter.transMissin +
+      "--" +
+      props.filter.fuel +
+      "--" +
+      props.filter.doors +
+      "--" +
+      props.filter.seats
+  );
 
-export const ShowCar = () => {
-  return cars.map((car) => (
-    <div className="showCar2" onClick={handleChange()}>
+  var cars2=[];
+
+  for (var i of cars) {
+    if (
+      (i.transmission == props.filter.transMissin ||
+        props.filter.transMissin == "") &&
+      (i.fuel == props.filter.fuel || props.filter.fuel == "") &&
+      (i.seats == props.filter.seats || props.filter.seats == "") &&
+      (i.doors == props.filter.doors || props.filter.doors == "")
+    )
+      cars2.push(i);
+  }
+
+  return cars2.map((car) => (
+    <div className="showCar2">
       <Row>
         <Col xs={8} md={8} lg={8}>
           <img src={car.img} alt="car" />
@@ -55,9 +74,7 @@ export const ShowCar = () => {
             </Row>
           </div>
         </Col>
-        <Col xs={1} md={1} lg={1}>
-
-        </Col>
+        <Col xs={1} md={1} lg={1}></Col>
         <Col xs={6} md={6} lg={6}>
           <Row className="bookNow">
             <Col xs={2} md={2} lg={2}></Col>
@@ -73,9 +90,7 @@ export const ShowCar = () => {
             <Col xs={2} md={2} lg={2}></Col>
           </Row>
         </Col>
-        <Col xs={1} md={1} lg={1}>
-
-        </Col>
+        <Col xs={1} md={1} lg={1}></Col>
       </Row>
     </div>
   ));

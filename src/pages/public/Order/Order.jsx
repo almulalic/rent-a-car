@@ -16,9 +16,7 @@ export const Order = () => {
 
   return (
     <Layout className="Order-FormContainer">
-      <Header>
         <Navbar />
-      </Header>
       <Content>
         <StepWizard currentStep={currentStep} setCurrentStep={setCurrentStep} />
         <div className="Order-ContentContainer">
