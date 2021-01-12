@@ -7,7 +7,7 @@ class HeroText extends React.Component {
   render() {
     return (
       <div className="heroText">
-        <Row>
+        <Row align="center">
           <Col xs={0} md={8} lg={7}></Col>
           <Col xs={24} md={8} lg={10}>
             <h1 className="yellow">Rent A Car Now</h1>
@@ -21,10 +21,20 @@ class HeroText extends React.Component {
           </Col>
           <Col xs={0} md={8} lg={7}></Col>
         </Row>
-        <Row>
+        <Row align="center">
           <Col xs={0} md={8} lg={7}></Col>
-          <Col xs={24} md={8} lg={10}>
-            <Button href="/order">View Listings</Button>
+          <Col align="center" xs={24} md={8} lg={10}>
+            <Button
+              id="landingButton"
+              style={{
+                color: "#ffbf00",
+                background: "#101010",
+              }}
+              size="large"
+              href="/order"
+            >
+              View Listings
+            </Button>
           </Col>
           <Col xs={0} md={8} lg={7}></Col>
         </Row>

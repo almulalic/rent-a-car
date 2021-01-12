@@ -78,23 +78,34 @@ export const DriversPerosnalInfoForm = () => {
     <Form {...formItemLayout} style={{ marginLeft: "1em" }} form={supervisorsForm}>
       {/* Supervisors's First Name */}
       <Form.Item label="Supervisor's First Name" name="supervisorsFirstName" hasFeedback>
-        <Input placeholder="Jane" id="error" />
+        <Input
+          placeholder="Jane"
+          name="supervisorsFirstName"
+          id="error"
+          rules={[{ required: true, message: "This field is required!" }]}
+        />
       </Form.Item>
 
       {/* Supervisor's Last Name */}
       <Form.Item label="Supervisors's Last Name" name="supervisorsLastName" hasFeedback>
-        <Input placeholder="Doe" id="error" />
+        <Input
+          placeholder="Doe"
+          name="supervisorsLastName"
+          id="error"
+          rules={[{ required: true, message: "This field is required!" }]}
+        />
       </Form.Item>
 
       {/* Supervisor's  Age */}
-      <Form.Item label="Supervisor's Age" hasFeedback>
+      <Form.Item label="Supervisor's Age" name="supervisorsAge" hasFeedback>
         <InputNumber
           name="supervisorsAge"
-          size="large"
+          size="middle"
           min={18}
           placeholder={36}
           max={100}
           defaultValue={20}
+          rules={[{ required: true, message: "This field is required!" }]}
           onChange={onChange}
         />
       </Form.Item>

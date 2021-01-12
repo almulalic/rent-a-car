@@ -1,6 +1,7 @@
 import React from "react";
 
 import "antd/dist/antd.css";
+import "./App.scss";
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 

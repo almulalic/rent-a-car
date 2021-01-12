@@ -1,63 +1,64 @@
-.formHome h1{
-    color: white;
-    padding: 3% 5%;
-    margin: 0;
+.formHome h1 {
+  color: white;
+  padding: 3% 5%;
+  margin: 0;
 }
 
-.formHome h1 span{
-    color: #ffbf00;
+.formHome h1 span {
+  color: #ffbf00;
 }
 
-.formHome{
-    width: auto;
-    height: auto;
-    /* margin-left: 20%; */
+.formHome {
+  width: auto;
+  height: auto;
+  /* margin-left: 20%; */
 }
 
-#head{
-    background-color: black;
+#head {
+  background-color: black;
 }
 
-#body{
-    background-color: white;
-    height: auto;
-    text-align: center;
+#body {
+  background-color: white;
+  height: auto;
+  text-align: center;
 }
 
-#body2{
-    background-color: white;
-    height: auto;
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10%;
+#body2 {
+  background-color: white;
+  height: auto;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
 }
 
-#body3{
-    background-color: white;
-    height: 100%;
-    text-align: center;
-    /* padding-left: 5%; */
-    /* padding-right: 5%; */
-    padding-bottom: 5%;
+#body3 {
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  /* padding-left: 5%; */
+  /* padding-right: 5%; */
+  padding-bottom: 5%;
 }
-#btn{
-    width: 20%;
-    border-color: black;
-    background-color: black;
+#btn {
+  width: 20%;
+  border-color: black;
+  background-color: black;
 }
 
 .ant-space.ant-space-vertical {
-    padding-top: 10%;
-    padding-bottom: 10%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .ant-picker {
-    width: 100%;
-    /* border: 0;
+  width: 100%;
+  /* border: 0;
     border-bottom: 1px solid black; */
 }
 
-.ant-picker:hover, .ant-picker-focused{
-    border-color: #ffbf00;
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #ffbf00;
 }

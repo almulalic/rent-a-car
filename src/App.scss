@@ -1,0 +1,47 @@
+:global(.ant-btn-primary) {
+  background-color: var(#ffbf00);
+  &:hover {
+    background-color: var(#ffbf00) !important;
+    border-color: var(#ffbf00) !important;
+  }
+}
+
+button:hover {
+  span {
+    color: #ffbf00 !important;
+  }
+  border-color: #ffbf00 !important;
+}
+
+#landingButton {
+  height: 50px !important;
+  width: 200px !important;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+
+  span {
+    align-self: center;
+    font-size: 22px;
+  }
+
+  a:hover {
+    background: #ffbf00 !important;
+  }
+
+  &:hover {
+    border-color: #ffbf00 !important;
+  }
+}
+
+input:hover {
+  border-color: #ffbf00 !important;
+}
+
+.ant-form-item-control-input-content:hover {
+  border-color: #ffbf00 !important;
+}
+
+.ant-input-number-focused:focus {
+  border-color: #ffbf00 !important;
+}
