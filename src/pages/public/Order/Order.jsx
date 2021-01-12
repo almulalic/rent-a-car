@@ -21,7 +21,8 @@ export const Order = () => {
       <Content>
         <StepWizard currentStep={currentStep} setCurrentStep={setCurrentStep} />
         <div className="Order-ContentContainer">
-          {currentStep == 0 ? <Details /> : <DriverAndPaymentForm />}
+          {/* {currentStep == 0 ? <SearchCar /> : <Details />} */}
+          {currentStep == 0 ? <SearchCar /> : currentStep == 1 ? <Details /> : <DriverAndPaymentForm />}
         </div>
       </Content>
       <PersonalizedFooter />
