@@ -23,9 +23,9 @@ class HeroText extends React.Component {
         </Row>
         <Row>
           <Col xs={0} md={8} lg={7}></Col>
-          <Col xs={24} md={8} lg={10}>
+          {/* <Col xs={24} md={8} lg={10}>
             <Button href="/order">View Listings</Button>
-          </Col>
+          </Col> */}
           <Col xs={0} md={8} lg={7}></Col>
         </Row>
         <Row>
