@@ -30,6 +30,10 @@
   .Step-Icon-Background {
     color: rgba(255, 255, 255, 0.5) !important;
   }
+
+  .ant-steps-item-title::after {
+    background: gray !important;
+  }
 }
 
 .Step-Active {
@@ -38,8 +42,14 @@
   .Step-Icon-Background {
     color: #ffbf00 !important;
   }
+  .ant-steps-item-title::after {
+    background: #ffbf00 !important;
+  }
 }
 
 .Step-Finished {
   color: white !important;
+  .ant-steps-item-title::after {
+    background: #ffbf00 !important;
+  }
 }

@@ -77,27 +77,32 @@ export const DriversPerosnalInfoForm = () => {
   const supervisorsMarkup = (
     <Form {...formItemLayout} style={{ marginLeft: "1em" }} form={supervisorsForm}>
       {/* Supervisors's First Name */}
-      <Form.Item label="Supervisor's First Name" name="supervisorsFirstName" hasFeedback>
-        <Input
-          placeholder="Jane"
-          name="supervisorsFirstName"
-          id="error"
-          rules={[{ required: true, message: "This field is required!" }]}
-        />
+      <Form.Item
+        label="Supervisor's First Name"
+        name="supervisorsFirstName"
+        rules={[{ required: true, message: "This field is required!" }]}
+        hasFeedback
+      >
+        <Input placeholder="Jane" name="supervisorsFirstName" id="error" />
       </Form.Item>
 
       {/* Supervisor's Last Name */}
-      <Form.Item label="Supervisors's Last Name" name="supervisorsLastName" hasFeedback>
-        <Input
-          placeholder="Doe"
-          name="supervisorsLastName"
-          id="error"
-          rules={[{ required: true, message: "This field is required!" }]}
-        />
+      <Form.Item
+        label="Supervisors's Last Name"
+        name="supervisorsLastName"
+        rules={[{ required: true, message: "This field is required!" }]}
+        hasFeedback
+      >
+        <Input placeholder="Doe" name="supervisorsLastName" id="error" />
       </Form.Item>
 
       {/* Supervisor's  Age */}
-      <Form.Item label="Supervisor's Age" name="supervisorsAge" hasFeedback>
+      <Form.Item
+        label="Supervisor's Age"
+        name="supervisorsAge"
+        rules={[{ required: true, message: "This field is required!" }]}
+        hasFeedback
+      >
         <InputNumber
           name="supervisorsAge"
           size="middle"
@@ -105,7 +110,6 @@ export const DriversPerosnalInfoForm = () => {
           placeholder={36}
           max={100}
           defaultValue={20}
-          rules={[{ required: true, message: "This field is required!" }]}
           onChange={onChange}
         />
       </Form.Item>
@@ -241,7 +245,8 @@ export const DriversPerosnalInfoForm = () => {
       </Form.Item>
 
       <Form.Item {...buttonItemLayout}>
-        <Button onClick={onCheck}>Submit</Button>
+        <Button onClick={onCheck}>Next</Button>
+        <Button onClick={onCheck}>Reset</Button>
       </Form.Item>
     </Form>
   );

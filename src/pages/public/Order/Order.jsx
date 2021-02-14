@@ -6,6 +6,7 @@ import { StepWizard } from "./components/StepWizard/StepWizard";
 
 import { DriverAndPaymentForm } from "./components/DriverAndPaymentForm/DriverAndPaymentForm";
 import { SearchCar } from "./components/SearchCar/SearchCar";
+import { Details } from "./components/Details/Details";
 
 import "./Order.scss";
 import { PersonalizedFooter } from "./../../../components/Footer/Footer";
@@ -16,11 +17,17 @@ export const Order = () => {
 
   return (
     <Layout className="Order-FormContainer">
-        <Navbar />
+      <Navbar />
       <Content>
         <StepWizard currentStep={currentStep} setCurrentStep={setCurrentStep} />
         <div className="Order-ContentContainer">
-          {currentStep == 0 ? <DriverAndPaymentForm /> : <SearchCar />}
+          {currentStep == 0 ? (
+            <SearchCar setCurrentStep={setCurrentStep} />
+          ) : currentStep == 1 ? (
+            <Details setCurrentStep={setCurrentStep} />
+          ) : (
+            <DriverAndPaymentForm setCurrentStep={setCurrentStep} />
+          )}
         </div>
       </Content>
       <PersonalizedFooter />

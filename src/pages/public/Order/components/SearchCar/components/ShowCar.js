@@ -15,12 +15,11 @@ export const ShowCar = (props) => {
       props.filter.seats
   );
 
-  var cars2=[];
+  var cars2 = [];
 
   for (var i of cars) {
     if (
-      (i.transmission == props.filter.transMissin ||
-        props.filter.transMissin == "") &&
+      (i.transmission == props.filter.transMissin || props.filter.transMissin == "") &&
       (i.fuel == props.filter.fuel || props.filter.fuel == "") &&
       (i.seats == props.filter.seats || props.filter.seats == "") &&
       (i.doors == props.filter.doors || props.filter.doors == "")
@@ -83,7 +82,7 @@ export const ShowCar = (props) => {
               <h1>$25 / Day</h1>
             </Col>
             <Col xs={10} md={10} lg={10}>
-              <Button id="btn2" type="primary" size="large" href="/order">
+              <Button id="btn2" type="primary" size="large" onClick={() => props.setCurrentStep(1)}>
                 Book Now
               </Button>
             </Col>
