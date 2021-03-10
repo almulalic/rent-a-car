@@ -10,6 +10,7 @@ export const PersonalizedFooter = () => {
           Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
         </Footer>
       </Col>
-    </Row>
+    </Row> 
+    
   );
 };
