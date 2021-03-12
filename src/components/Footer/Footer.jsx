@@ -3,7 +3,7 @@ import { Layout, Row, Col } from "antd";
 export const PersonalizedFooter = () => {
   const { Footer } = Layout;
 
-  return (
+  return (  
     <Row>
       <Col span={24}>
         <Footer style={{ textAlign: "center" }}>
