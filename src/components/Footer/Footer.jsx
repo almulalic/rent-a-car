@@ -8,7 +8,7 @@ export const PersonalizedFooter = () => {
       <Col span={24}>
         <Footer style={{ textAlign: "center" }}>
           Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
-        </Footer>
+        </Footer>   
       </Col>
     </Row> 
     
