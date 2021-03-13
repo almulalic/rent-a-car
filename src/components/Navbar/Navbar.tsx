@@ -25,7 +25,7 @@ export const Navbar = () => {
             My bookings
           </Menu.Item>
           <Menu.Item key="2">
-            <LoginOutlined />
+            <LoginOutlined />   
             SignIn/SignUp
           </Menu.Item>
           <Menu.Item key="3">Language</Menu.Item>
