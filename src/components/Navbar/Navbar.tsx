@@ -7,10 +7,10 @@ const { Header  } = Layout;
 export const Navbar = () => {
  
   return (
-    <Header>
+    <Header>  
     <Row gutter={[16, 24]}>
       <Col span={12}>
-        <div className="logo">
+        <div className="logo">   
           <a href="/">
             <h1>
               Logo<span>Go</span>
