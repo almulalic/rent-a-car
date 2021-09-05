@@ -23,13 +23,13 @@
   display: table-cell; /*acts like a table cell*/
 }
 
-.selectTag{
+.selectTag {
   vertical-align: middle;
   display: table-cell;
   padding-left: 1rem;
 }
 
 span.ant-select-selection-placeholder {
-    font-weight: 500;
-    color: darkgray;
+  font-weight: 500;
+  color: darkgray;
 }

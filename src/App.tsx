@@ -1,9 +1,7 @@
-import React from "react";
-
 import "antd/dist/antd.css";
 import "./App.scss";
 
-import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Routes from "./routes/Routes";
 import { Contact, Landing, LogIn, SingUp, Order } from "./pages/public";

@@ -1,18 +1,3 @@
-:global(.ant-btn-primary) {
-  background-color: var(#ffbf00);
-  &:hover {
-    background-color: var(#ffbf00) !important;
-    border-color: var(#ffbf00) !important;
-  }
-}
-
-button:hover {
-  span {
-    color: #ffbf00 !important;
-  }
-  border-color: #ffbf00 !important;
-}
-
 #landingButton {
   height: 50px !important;
   width: 200px !important;
@@ -44,4 +29,16 @@ input:hover {
 
 .ant-input-number-focused:focus {
   border-color: #ffbf00 !important;
+}
+
+body {
+  font-family: "Ubuntu";
+}
+
+*::selection {
+  background: #ffbf00 !important;
+}
+
+html {
+  --antd-wave-shadow-color: #ffbf00 !important;
 }

@@ -6,6 +6,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 
   .Step-Icon-Background {
     font-size: 38px;
@@ -22,6 +23,26 @@
     z-index: 10;
     color: black !important;
   }
+}
+
+.stepResetModal button:first-of-type {
+  color: #ff0033 !important;
+}
+
+.stepResetModal button:first-of-type:active {
+  border-color: #ff0033 !important;
+}
+
+.ant-steps-item-active {
+  cursor: pointer;
+}
+
+.ant-steps-item-content {
+  user-select: none;
+}
+
+.Step-Title {
+  margin-bottom: 0 !important;
 }
 
 .Step-Disabled {
@@ -42,14 +63,23 @@
   .Step-Icon-Background {
     color: #ffbf00 !important;
   }
+  .ant-steps-icon .Step-Icon {
+    color: black !important;
+  }
   .ant-steps-item-title::after {
     background: #ffbf00 !important;
   }
 }
 
 .Step-Finished {
-  color: white !important;
+  h4,
+  span,
+  .Step-Icon-Background {
+    color: #ffbf00 !important;
+    opacity: 0.4;
+  }
   .ant-steps-item-title::after {
     background: #ffbf00 !important;
+    opacity: 0.4;
   }
 }
