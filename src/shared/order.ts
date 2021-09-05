@@ -136,6 +136,7 @@ export class Order implements IOrder {
 
     try {
       parsedData = JSON.parse(storedOrder ?? "") as IOrder;
+
       this.vehicle = parsedData.vehicle;
       this.totalPrice = parsedData.totalPrice;
       this.additionalOptions = parsedData.additionalOptions;
@@ -152,7 +153,6 @@ export class Order implements IOrder {
     localStorage.setItem("serializedOrder", "");
     this.vehicle = vehicle;
     this.additionalOptions = [];
-    this.totalDays = 1;
     this.totalPrice = vehicle.price * this.totalDays;
     this.serialize();
   }

@@ -1,5 +1,5 @@
 import "./VehicleDetails.css";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Form } from "antd";
 import { AdditionalOptions } from "./AdditionalOptions";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +7,17 @@ import { Order } from "../../../../../shared/order";
 
 export const VehicleDetails = (props: any) => {
   const currentOrder: Order = useSelector((state: any) => state.order.currentOrder);
+
+  const [form] = Form.useForm();
+
+  const validateForm = async () => {
+    await form.validateFields(["pickupAddress", "dropoffAddress"]);
+  };
+
+  const onSumit = async () => {
+    await validateForm();
+    if (form.getFieldsError(["pickupAddress", "dropoffAddress"])) props.setCurrentStep(2);
+  };
 
   return (
     <div className="details">
@@ -39,39 +50,14 @@ export const VehicleDetails = (props: any) => {
                 </Row>
               </Col>
 
-              {/* <Col md={12} lg={12}>
-                <Row>
-                  <Col md={7} lg={7}>
-                    <h2>Pick up</h2>
-                    <p>
-                      Sarajevo, address
-                      <br />
-                      Bosnia and Herzegovina
-                      <br />
-                      12/02/2021
-                    </p>
-                  </Col>
-                  <Col md={7} lg={7}>
-                    <h2>Drop off</h2>
-                    <p>
-                      Sarajevo, address
-                      <br />
-                      Bosnia and Herzegovina
-                      <br />
-                      12/02/2021
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-           */}
               <Col md={14} lg={14}>
                 <h2>Additional option</h2>
-                <AdditionalOptions />
+                <AdditionalOptions form={form} />
               </Col>
             </Row>
           </Row>
           <div className="twoButtonRow">
-            <Button type="primary" size="large" onClick={() => props.setCurrentStep(2)}>
+            <Button type="primary" size="large" onClick={onSumit}>
               Continue
             </Button>
           </div>

@@ -1,32 +1,44 @@
-import React from "react";
-import { Input } from "antd";
+import React, { useEffect } from "react";
 import { Checkbox } from "antd";
 import { useState } from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Form, Input } from "antd";
 import ReactTooltip from "react-tooltip";
 
 import { InfoCircleOutlined } from "@ant-design/icons";
 import { additionalOptions, IAdditionalOption, IOrder } from "../../../../../shared/order";
 
 import "./VehicleDetails.css";
-import { addAdditionalOption, removeAdditionalOption } from "../../../../../redux/Order/orderReducer";
+import {
+  addAdditionalOption,
+  DEFAULT_ADDRESS,
+  removeAdditionalOption,
+  setDropoffAddress,
+  setPickupAddress,
+} from "../../../../../redux/Order/orderReducer";
 import { useDispatch, useSelector } from "react-redux";
 
-export const AdditionalOptions = () => {
-  const [isCustomPickup, setIsCustomPickup] = useState(false);
-  const [pickupAddressInput, setPickupAddressInput] = useState("");
-  const [isCustomDropoff, setIsCustomDropoff] = useState(false);
-  const [dropoffAddressInput, setDropoffAddressInput] = useState("");
-
-  const currentOrder: IOrder = useSelector((state: any) => state.order.currentOrder);
+export const AdditionalOptions = ({ form }: any) => {
+  let { currentOrder, pickupAddress, dropoffAddress } = useSelector((state: any) => state.order);
   const dispatch = useDispatch();
 
+  const onPickupAddressChange = (e: any) => {
+    dispatch(setPickupAddress(e.target.value));
+  };
+
+  const onDropoffAddressChange = (e: any) => {
+    dispatch(setDropoffAddress(e.target.value));
+  };
+
+  const [isCustomPickup, setIsCustomPickup] = useState(
+    currentOrder.additionalOptions.filter((x: IAdditionalOption) => x.value == "customPickup").length != 0
+  );
+  const [isCustomDropoff, setIsCustomDropoff] = useState(
+    currentOrder.additionalOptions.filter((x: IAdditionalOption) => x.value == "customDropoff").length != 0
+  );
+
   function onChange(e: any, option: IAdditionalOption) {
-    if (option.value == "customPickup") {
-      setIsCustomPickup(e.target.checked);
-    } else if (option.value == "customDropoff") {
-      setIsCustomDropoff(e.target.checked);
-    }
+    if (option.value == "customPickup") setIsCustomPickup(e.target.checked);
+    else if (option.value == "customDropoff") setIsCustomDropoff(e.target.checked);
 
     if (e.target.checked) dispatch(addAdditionalOption(option));
     else dispatch(removeAdditionalOption(option));
@@ -36,7 +48,7 @@ export const AdditionalOptions = () => {
     <>
       <Checkbox.Group
         style={{ width: "100%" }}
-        defaultValue={currentOrder.additionalOptions.map((x) => x.value)}
+        defaultValue={currentOrder.additionalOptions.map((x: IAdditionalOption) => x.value)}
       >
         <Row>
           {additionalOptions.map((x: IAdditionalOption) => {
@@ -57,29 +69,28 @@ export const AdditionalOptions = () => {
       </Checkbox.Group>
       <br />
       <br />
-      {isCustomPickup && (
-        <>
-          <Input
-            placeholder="Pickup adress (same city)"
-            value={pickupAddressInput}
-            onChange={(e) => setPickupAddressInput(e.target.value)}
-          />
-          <br />
-          <br />
-        </>
-      )}
-      {isCustomDropoff && (
-        <>
-          <Input
-            placeholder="Dropoff adress (same city)"
-            value={dropoffAddressInput}
-            onChange={(e) => setDropoffAddressInput(e.target.value)}
-          />
-
-          <br />
-          <br />
-        </>
-      )}
+      <Form form={form} layout="vertical" autoComplete="off">
+        {isCustomPickup && (
+          <Form.Item name="pickupAddress" rules={[{ required: true, message: "This field is required!" }]}>
+            <Input
+              placeholder="Pickup adress (same city)"
+              value={pickupAddress === DEFAULT_ADDRESS ? "" : pickupAddress}
+              onChange={onPickupAddressChange}
+              allowClear
+            />
+          </Form.Item>
+        )}
+        {isCustomDropoff && (
+          <Form.Item name="dropoffAddress" rules={[{ required: true, message: "This field is required!" }]}>
+            <Input
+              placeholder="Dropoff adress (same city)"
+              value={dropoffAddress === DEFAULT_ADDRESS ? "" : dropoffAddress}
+              onChange={onDropoffAddressChange}
+              allowClear
+            />
+          </Form.Item>
+        )}
+      </Form>
     </>
   );
 };

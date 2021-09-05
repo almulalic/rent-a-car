@@ -1,42 +1,51 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IAdditionalOption, IOrder, Order, Vehicle } from "../../shared/order";
-import moment, { Moment } from "moment";
 
 export interface IOrderFilters {
   transmission: string;
   fuel: string;
   doors: string;
   seats: string;
-  reservationPeriod: [Moment, Moment];
-  [index: string]: string | [Moment, Moment];
+  reservationPeriod: [];
+  [index: string]: string | [];
 }
 
 interface IOrderReducerInitialState {
   filters: IOrderFilters;
   currentOrder: IOrder | null;
+  dropoffAddress: string;
+  pickupAddress: string;
 }
 
+export const DEFAULT_ADDRESS = "71000 Sarajevo, adresa rentakara 13";
 export const initialState: IOrderReducerInitialState = {
   filters: {
     transmission: "",
     fuel: "",
     doors: "",
     seats: "",
-    reservationPeriod: [moment(), moment().add(1, "day")],
+    reservationPeriod: [],
   },
-  currentOrder: null,
+  currentOrder: new Order(),
+  dropoffAddress: DEFAULT_ADDRESS,
+  pickupAddress: DEFAULT_ADDRESS,
 };
 
 const orderReducerSlice = createSlice({
   name: "orderReducerSlice",
   initialState: initialState,
   reducers: {
-    setFilters(state: any, action: any) {
-      state.filters = action.payload;
-    },
-
     setFilter(state: any, action: any) {
       state.filters[action.payload.label] = action.payload.value;
+
+      if (action.payload.label == "reservationPeriod") {
+        state.currentOrder.loadFromStroage();
+        state.currentOrder.totalDays = state.filters.reservationPeriod[1].diff(
+          state.filters.reservationPeriod[0],
+          "days"
+        );
+        state.currentOrder.serialize();
+      }
     },
 
     setSelectedVehicle(state: any, action: any) {
@@ -51,13 +60,16 @@ const orderReducerSlice = createSlice({
         action.payload.transmission
       );
 
-      if (state.currentOrder != null) state.currentOrder.setNewVehicle(vehicle);
-      else {
-        state.currentOrder = new Order();
-        state.currentOrder.loadFromStroage();
+      state.currentOrder.loadFromStroage();
+      state.currentOrder.setNewVehicle(vehicle);
+    },
 
-        if (state.currentOrder.vehicle.fuel == "") state.currentOrder.setNewVehicle(vehicle);
-      }
+    setPickupAddress(state: any, action: any) {
+      state.pickupAddress = action.payload;
+    },
+
+    setDropoffAddress(state: any, action: any) {
+      state.dropoffAddress = action.payload;
     },
 
     addAdditionalOption(state: any, action: any) {
@@ -74,15 +86,22 @@ const orderReducerSlice = createSlice({
 
     resetOrder(state: any) {
       state.currentOrder = new Order();
+      if (state.filters.reservationPeriod.length == 2) {
+        state.currentOrder.totalDays = state.filters.reservationPeriod[1].diff(
+          state.filters.reservationPeriod[0],
+          "days"
+        );
+      }
       state.currentOrder.serialize();
     },
   },
 });
 
 export const {
-  setFilters,
   setFilter,
   setSelectedVehicle,
+  setPickupAddress,
+  setDropoffAddress,
   addAdditionalOption,
   removeAdditionalOption,
   resetOrder,

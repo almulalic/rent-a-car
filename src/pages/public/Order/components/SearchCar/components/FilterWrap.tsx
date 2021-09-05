@@ -2,7 +2,6 @@ import "./FilterWrap.css";
 import { Row, Col, Select, Form, DatePicker } from "antd";
 
 import { DateTime } from "luxon";
-import moment from "moment";
 
 export const FilterWrap = (props: any) => {
   const { RangePicker } = DatePicker;
@@ -10,7 +9,7 @@ export const FilterWrap = (props: any) => {
 
   function disabledDate(current: any) {
     // Can not select days before today and today
-    return current && current < DateTime.local().endOf("day");
+    return current && current < DateTime.local().startOf("day");
   }
 
   return (
@@ -73,9 +72,9 @@ export const FilterWrap = (props: any) => {
 
         <RangePicker
           value={props.filter.reservationPeriod}
-          name="bookingPeriod"
+          name="reservationPeriod"
           disabledDate={disabledDate}
-          onChange={(value) => props.setFilter("date", value)}
+          onChange={(value) => props.setFilter("reservationPeriod", value)}
         />
       </div>
     </div>
