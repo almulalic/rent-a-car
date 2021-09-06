@@ -1,7 +1,7 @@
 import "./ShowCar.css";
 import { Row, Col, Button } from "antd";
 import { useDispatch } from "react-redux";
-import { setSelectedVehicle } from "../../../../../../redux/Order/orderReducer";
+import { setSelectedVehicle } from "../../../../../../redux/Order/OrderReducer";
 
 let cars = require("../carInfo.json");
 

@@ -10,16 +10,90 @@
 
 .disabledOverlay {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
   cursor: not-allowed;
+
+  .disabledIcon {
+    top: 50%;
+    left: 50%;
+    color: #ff4d4f;
+    font-size: 5rem !important;
+  }
+
+  .disabledText {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  .disabledTextSmall {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.completedOverlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  cursor: pointer;
+
+  .completedIcon {
+    top: 50%;
+    left: 50%;
+    color: green;
+    font-size: 5rem !important;
+  }
+
+  .completedText {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  .completedTextSmall {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.ant-input-group-addon .ant-select-open .ant-select-selector,
+.ant-input-group-addon .ant-select-focused .ant-select-selector {
+  color: rgb(15, 15, 15) !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border-color: #ffbf00 !important;
+  box-shadow: 0 0 2px rgba(255, 191, 0, 0.678) !important;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #ffbf00 !important;
+  box-shadow: 0 0 2px rgba(255, 191, 0, 0.678) !important;
 }
 
 .twoButtonRow {

@@ -1,6 +1,6 @@
 import { Row, Col, Button } from "antd";
 import { useSelector } from "react-redux";
-import { IAdditionalOption, IOrder } from "../../../../../shared/order";
+import { IAdditionalOption, IOrder } from "../../../../../redux/Order/models";
 
 export interface IConfirmOrderStoreProps {
   currentOrder: IOrder;
@@ -82,7 +82,7 @@ export const ConfirmOrder = (props: any) => {
       </Row>
       <Row>
         <Col md={24} lg={24}>
-          <Button id="btn3" type="primary" size="large" onClick={() => onConfirmAction}>
+          <Button id="btn3" type="primary" size="large" onClick={onConfirmAction}>
             Proceed to payment
           </Button>
         </Col>

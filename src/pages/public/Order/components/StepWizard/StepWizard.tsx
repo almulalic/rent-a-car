@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 import "../../Order.scss";
 import "./StepWizard.scss";
 import { useDispatch } from "react-redux";
-import { resetOrder } from "../../../../../redux/Order/orderReducer";
+import { resetOrder } from "../../../../../redux/Order/OrderReducer";
 
 export const StepWizard = ({ currentStep, setCurrentStep }: any) => {
   const { Title, Text } = Typography;

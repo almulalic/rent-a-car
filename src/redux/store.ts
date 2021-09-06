@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import orderReducer from "./Order/orderReducer";
+import orderReducer from "./Order/OrderReducer";
 
 const store = configureStore({
   reducer: {

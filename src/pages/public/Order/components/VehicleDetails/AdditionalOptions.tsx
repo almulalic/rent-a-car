@@ -5,7 +5,6 @@ import { Row, Col, Form, Input } from "antd";
 import ReactTooltip from "react-tooltip";
 
 import { InfoCircleOutlined } from "@ant-design/icons";
-import { additionalOptions, IAdditionalOption, IOrder } from "../../../../../shared/order";
 
 import "./VehicleDetails.css";
 import {
@@ -14,8 +13,9 @@ import {
   removeAdditionalOption,
   setDropoffAddress,
   setPickupAddress,
-} from "../../../../../redux/Order/orderReducer";
+} from "../../../../../redux/Order/OrderReducer";
 import { useDispatch, useSelector } from "react-redux";
+import { additionalOptions, IAdditionalOption } from "../../../../../redux/Order/models";
 
 export const AdditionalOptions = ({ form }: any) => {
   let { currentOrder, pickupAddress, dropoffAddress } = useSelector((state: any) => state.order);

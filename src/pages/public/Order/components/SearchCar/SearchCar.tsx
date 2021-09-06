@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SearchCar.css";
 import { FilterWrap } from "./components/FilterWrap";
 import { ShowCar } from "./components/ShowCar";
-import { IOrderFilters, setFilter } from "../../../../../redux/Order/orderReducer";
+import { IOrderFilters, setFilter } from "../../../../../redux/Order/OrderReducer";
 import { useDispatch, useSelector } from "react-redux";
 
 export const SearchCar = (props: any) => {

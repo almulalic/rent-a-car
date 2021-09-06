@@ -2,8 +2,8 @@ import "./VehicleDetails.css";
 import { Row, Col, Button, Form } from "antd";
 import { AdditionalOptions } from "./AdditionalOptions";
 
-import { useDispatch, useSelector } from "react-redux";
-import { Order } from "../../../../../shared/order";
+import { useSelector } from "react-redux";
+import { Order } from "../../../../../redux/Order/models/Order";
 
 export const VehicleDetails = (props: any) => {
   const currentOrder: Order = useSelector((state: any) => state.order.currentOrder);
@@ -16,7 +16,8 @@ export const VehicleDetails = (props: any) => {
 
   const onSumit = async () => {
     await validateForm();
-    if (form.getFieldsError(["pickupAddress", "dropoffAddress"])) props.setCurrentStep(2);
+    if (form.getFieldsError(["pickupAddress", "dropoffAddress"]).every((x) => x.errors.length === 0))
+      props.setCurrentStep(2);
   };
 
   return (
