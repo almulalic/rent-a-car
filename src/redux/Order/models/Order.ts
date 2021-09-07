@@ -80,7 +80,7 @@ export class Order implements IOrder {
       personalInfo.countryCallPrefix,
       personalInfo.supervisor
     );
-
+    this.customer.perosnal.serialize();
     this.serialize();
   }
 

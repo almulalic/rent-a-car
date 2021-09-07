@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { Form, Input, Select as select, InputNumber, Button } from "antd";
 
 import countryInfo from "./countryInfo.json";
@@ -9,15 +9,19 @@ const formItemLayout = {
   wrapperCol: { span: 24 },
 };
 
-export const DriversPerosnalInfoForm = ({ setPersonalFormActive, onSuccessfulSubmitPersonalForm }) => {
+export const DriversPerosnalInfoForm = ({
+  setPersonalFormActive,
+  onSuccessfulSubmitPersonalForm,
+  loadCacheDataAction,
+}) => {
   const Select = select as any;
   const { Option } = Select;
   const { currentOrder } = useSelector((state: any) => state.order);
 
   useEffect(() => {
-    if (localStorage.getItem("personalInfo") != null) {
+    if (localStorage.getItem("personalInfo") != null && loadCacheDataAction) {
       let parsedInfo: IPersonalInfo = JSON.parse(localStorage.getItem("personalInfo"));
-
+      console.log(parsedInfo);
       if (parsedInfo.age != 0) {
         form.setFieldsValue({ driversFullName: parsedInfo.fullName });
         form.setFieldsValue({ driversAge: parsedInfo.age });
@@ -36,7 +40,7 @@ export const DriversPerosnalInfoForm = ({ setPersonalFormActive, onSuccessfulSub
         }
       }
     }
-  }, [currentOrder]);
+  }, [loadCacheDataAction]);
 
   const tooltipAgeMessage =
     "Drivers under the age of 18 must have a valid drivers license and be with someone (Supervisor) that has a valid drivers license and at least 2 years of driving experience at all times.";

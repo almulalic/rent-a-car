@@ -11,6 +11,7 @@ export interface IPersonalInfo {
   contactNumber: string;
   countryCallPrefix: string;
   supervisor: ISupervisorInfo | null;
+  serialize();
 }
 
 export class PersonalInfo implements IPersonalInfo {
@@ -38,8 +39,6 @@ export class PersonalInfo implements IPersonalInfo {
     this.contactNumber = contactNumber;
     this.countryCallPrefix = countryCallPrefix;
     this.supervisor = supervisor;
-
-    this.serialize();
   }
 
   serialize() {

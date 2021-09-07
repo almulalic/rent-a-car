@@ -36,7 +36,7 @@ export const VehicleDetails = (props: any) => {
               <Col md={10} lg={10}>
                 <Row>
                   <Col md={12} lg={12}>
-                    <img src={currentOrder.vehicle.img} alt="golf" />
+                    <img src={currentOrder.vehicle.img} className="vehicleImg" alt="golf" />
                   </Col>
                   <Col md={12} lg={12}>
                     {currentOrder.vehicle.price}$ / Day

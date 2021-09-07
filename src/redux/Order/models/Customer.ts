@@ -33,7 +33,7 @@ export class Customer implements ICustomer {
     country: string,
     contactNumber: string
   ) {
-    this.perosnal = new PersonalInfo(firstName, lastName, age, emailAddress, country, contactNumber);
+    this.perosnal = new PersonalInfo(`${firstName} ${lastName}`, age, emailAddress, country, contactNumber);
   }
 
   setPersonalInfo(personal: IPersonalInfo): void {
