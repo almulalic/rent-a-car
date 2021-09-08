@@ -9,6 +9,7 @@ import {
   DatePicker,
   Radio,
   Typography,
+  Alert,
 } from "antd";
 import moment from "moment";
 import CreditCardInput from "react-credit-card-input";
@@ -137,7 +138,7 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
   const onSubmit = async () => {
     await onCreditInfoSubmit();
   };
-  const { Text, Link } = Typography;
+  const { Text } = Typography;
 
   const paypalMarkup = (
     <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
@@ -207,7 +208,13 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
         ) : selectedPaymentMethod === "paypal" ? (
           paypalMarkup
         ) : (
-          <div>Cash</div>
+          <div>
+            <Alert
+              message="If you want to pay with cash you will need to pay 30% of the price upfront. You will be contacted to pay the fee up to 15 days before the deadline."
+              type="info"
+              showIcon
+            />
+          </div>
         )}
       </Card>
       <Card title="Billing information"> {billingInformationFormMarkup}</Card>
