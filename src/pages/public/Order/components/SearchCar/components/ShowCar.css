@@ -55,3 +55,18 @@
 .bookNow h1{
     margin-top: 2px;
 }
+@media only screen and (max-width: 420px) {
+    .specs{
+        position: relative;
+        /* padding-top: 25%; */
+    }
+    .bookNow {
+        /* padding-top: 100%; */
+        box-shadow: none;
+        position: relative;
+    }
+    .showCar2{
+        
+        height: auto;
+    }
+  }

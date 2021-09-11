@@ -29,6 +29,10 @@
   padding-left: 1rem;
 }
 
+.rangePickerDate {
+  margin: 1rem;
+}
+
 span.ant-select-selection-placeholder {
   font-weight: 500;
   color: darkgray;

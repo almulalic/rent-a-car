@@ -26,10 +26,10 @@ export const ShowCar = (props: any) => {
         .map((car: any) => (
           <div className="showCar2">
             <Row>
-              <Col xs={8} md={8} lg={8}>
+              <Col xs={24} md={8} lg={8}>
                 <img src={car.img} alt="car" />
               </Col>
-              <Col xs={8} md={8} lg={8}>
+              <Col xs={24} md={8} lg={8}>
                 <div className="specs">
                   <Row>
                     <Col xs={1} md={1} lg={1}></Col>
@@ -69,7 +69,7 @@ export const ShowCar = (props: any) => {
                 </div>
               </Col>
               <Col xs={1} md={1} lg={1}></Col>
-              <Col xs={6} md={6} lg={6}>
+              <Col xs={24} md={6} lg={6}>
                 <Row className="bookNow">
                   <Col xs={2} md={2} lg={2}></Col>
                   <Col xs={10} md={10} lg={10}>

@@ -1,0 +1,11 @@
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #ffbf00 !important;
+}
+
+@media only screen and (max-width: 420px) {
+    .menuItems{
+        width: 40px;
+        right: 0;
+    }
+    
+  }

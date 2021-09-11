@@ -52,7 +52,7 @@ export const StepWizard = ({ currentStep, setCurrentStep }: any) => {
 
   return (
     <div className="Order-StepsContainer">
-      <Steps current={currentStep} onChange={(step) => changeCurrentStep(step)}>
+      <Steps responsive={true} current={currentStep} onChange={(step) => changeCurrentStep(step)}>
         <Step
           type="navigation"
           status={currentStep <= 0 ? "wait" : "finish"}

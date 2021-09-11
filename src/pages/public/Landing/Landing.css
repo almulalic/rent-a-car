@@ -6,6 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media only screen and (max-width: 420px) {
+  .footerCustom{
+      display: none;
+  }
+  
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

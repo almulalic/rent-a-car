@@ -18,8 +18,7 @@ export const ConfirmOrder = (props: any) => {
   return (
     <div className="details">
       <Row>
-        <Col md={1} lg={1}></Col>
-        <Col md={22} lg={22}>
+        <Col xs={24} md={24} lg={24}>
           <div className="priceSummary">
             <ul>
               {Object.keys(currentOrder.vehicle).map((x: string) => {
@@ -35,11 +34,9 @@ export const ConfirmOrder = (props: any) => {
             </ul>
           </div>
         </Col>
-        <Col md={1} lg={1}></Col>
       </Row>
       <Row>
-        <Col md={1} lg={1}></Col>
-        <Col md={22} lg={22}>
+        <Col xs={24} md={24} lg={24}>
           <div className="billInfo">
             <ul>
               {currentOrder.additionalOptions.map((x: IAdditionalOption) => {
@@ -57,16 +54,15 @@ export const ConfirmOrder = (props: any) => {
             </ul>
           </div>
         </Col>
-        <Col md={22} lg={22}>
+        <Col xs={24} md={24} lg={24}>
           <div className="billInfo">
             Pickup address: {pickupAddress} <br />
             Dropoff addres: {dropoffAddress}
           </div>
         </Col>
-        <Col md={1} lg={1}></Col>
       </Row>
       <Row>
-        <Col md={24} lg={24}>
+        <Col xs={24} md={24} lg={24}>
           <div className="total">
             Vehicle rent: ${currentOrder.vehicle.price} <br />
             Additional fees: $

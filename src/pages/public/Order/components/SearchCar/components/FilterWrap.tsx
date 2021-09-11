@@ -13,6 +13,7 @@ export const FilterWrap = (props: any) => {
   }
 
   return (
+    
     <div className="filterWrap">
       <div className="childWrap">
         <h1>Filters:</h1>
@@ -74,6 +75,7 @@ export const FilterWrap = (props: any) => {
           value={props.filter.reservationPeriod}
           name="reservationPeriod"
           disabledDate={disabledDate}
+          className="rangePickerDate"
           onChange={(value) => props.setFilter("reservationPeriod", value)}
         />
       </div>
