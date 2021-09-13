@@ -8,12 +8,17 @@ const { Header } = Layout;
 
 export const Navbar = () => {
   let history = useHistory();
-  let isLoggedIn =
-    localStorage.getItem("permission") != null && localStorage.getItem("permission") != undefined;
+  let isLoggedIn = localStorage.getItem("token") != null && localStorage.getItem("token") != undefined;
 
   const logOutAction = () => {
-    localStorage.removeItem("permission");
-    history.push("/landing");
+    localStorage.removeItem("token");
+    localStorage.removeItem("personalInfo");
+    localStorage.removeItem("order");
+
+    setTimeout(() => {
+      window.location.reload();
+      history.push("/landing");
+    }, 750);
   };
 
   return (
@@ -32,6 +37,10 @@ export const Navbar = () => {
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]} className="menuItems">
             {!isLoggedIn ? (
               <>
+                <Menu.Item key="4">
+                  <PhoneOutlined />
+                  <span style={{ marginLeft: "7px" }}>Call Us</span>
+                </Menu.Item>
                 <Menu.Item key="2" onClick={() => history.push("/login")}>
                   <LoginOutlined />
                   <span style={{ marginLeft: "7px" }}>SignIn</span>
@@ -44,19 +53,19 @@ export const Navbar = () => {
             ) : (
               <>
                 <Menu.Item key="1">
-              <UserOutlined />
-              <span style={{ marginLeft: "7px" }}>My bookings</span>
-            </Menu.Item>
-              <Menu.Item key="3" onClick={logOutAction}>
-                <LogoutOutlined />
-                <span style={{ marginLeft: "7px" }}>LogOut</span>
-              </Menu.Item>
+                  <UserOutlined />
+                  <span style={{ marginLeft: "7px" }}>My bookings</span>
+                </Menu.Item>
+                <Menu.Item key="4">
+                  <PhoneOutlined />
+                  <span style={{ marginLeft: "7px" }}>Call Us</span>
+                </Menu.Item>
+                <Menu.Item key="3" onClick={logOutAction}>
+                  <LogoutOutlined />
+                  <span style={{ marginLeft: "7px" }}>LogOut</span>
+                </Menu.Item>
               </>
             )}
-            <Menu.Item key="4">
-              <PhoneOutlined />
-              <span style={{ marginLeft: "7px" }}>Call Us</span>
-            </Menu.Item>
           </Menu>
         </Col>
       </Row>

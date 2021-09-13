@@ -24,9 +24,11 @@ export const DriverAndPaymentForm = () => {
     setPaymentFormActive(true);
   };
 
+  const isLoggedIn = localStorage.getItem("token") != undefined;
+
   const [loadCacheDataAction, setLoadCachedDataAction] = useState(false);
   const loadCachedData = () => {
-    setLoadCachedDataAction(!loadCacheDataAction);
+    if (isLoggedIn) setLoadCachedDataAction(!loadCacheDataAction);
   };
 
   const [isAwaitingPaypalPayment, setAwaitingPaypalPayment] = useState(false);
@@ -38,7 +40,11 @@ export const DriverAndPaymentForm = () => {
           <Card
             title="Enter your personal information"
             bordered={isPersonalFormActive}
-            extra={<Button onClick={loadCachedData}>Load Last</Button>}
+            extra={
+              <Button disabled={!isLoggedIn} onClick={loadCachedData}>
+                Load Last
+              </Button>
+            }
           >
             <div className="completedOverlay" style={{ display: !isPersonalFormActive ? "flex" : "none" }}>
               <CheckCircleOutlined className="completedIcon" />

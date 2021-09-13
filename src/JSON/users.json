@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "fullName": "tester",
+    "age": 21,
+    "emailAddress": "tester@rac.com",
+    "country": "BA",
+    "contactNumber": "123 456",
+    "countryCallPrefix": "BA",
+    "supervisor": null,
+    "password": "MTIzNDU2Nzg="
+  }
+]

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { Form, Input, Select as select, InputNumber, Button } from "antd";
 
-import countryInfo from "./countryInfo.json";
+import countryInfo from "../../../../../JSON/countryInfo.json";
 import { useSelector } from "react-redux";
 import { IPersonalInfo } from "../../../../../redux/Order/models";
 
@@ -19,26 +19,34 @@ export const DriversPerosnalInfoForm = ({
   const { currentOrder } = useSelector((state: any) => state.order);
 
   useEffect(() => {
-    if (localStorage.getItem("personalInfo") != null && loadCacheDataAction) {
-      let parsedInfo: IPersonalInfo = JSON.parse(localStorage.getItem("personalInfo"));
-      console.log(parsedInfo);
-      if (parsedInfo.age != 0) {
-        form.setFieldsValue({ driversFullName: parsedInfo.fullName });
-        form.setFieldsValue({ driversAge: parsedInfo.age });
-        form.setFieldsValue({ email: parsedInfo.emailAddress });
-        form.setFieldsValue({ confirmEmail: parsedInfo.emailAddress });
-        form.setFieldsValue({ country: parsedInfo.country });
-        form.setFieldsValue({ contactNumber: parsedInfo.contactNumber });
-        form.setFieldsValue({ countryCallPrefix: parsedInfo.countryCallPrefix });
-        setSelectedCountry(countryInfo.filter((x) => x.code == parsedInfo.country)[0]);
-        setPhoneInputDisabled(false);
-        setDriversAge(parsedInfo.age);
+    try {
+      if (
+        localStorage.getItem("token") != null &&
+        localStorage.getItem("personalInfo") != null &&
+        loadCacheDataAction
+      ) {
+        let parsedInfo: IPersonalInfo = JSON.parse(localStorage.getItem("personalInfo"));
+        console.log(parsedInfo);
+        if (parsedInfo.age != 0) {
+          form.setFieldsValue({ driversFullName: parsedInfo.fullName });
+          form.setFieldsValue({ driversAge: parsedInfo.age });
+          form.setFieldsValue({ email: parsedInfo.emailAddress });
+          form.setFieldsValue({ confirmEmail: parsedInfo.emailAddress });
+          form.setFieldsValue({ country: parsedInfo.country });
+          form.setFieldsValue({ contactNumber: parsedInfo.contactNumber });
+          form.setFieldsValue({ countryCallPrefix: parsedInfo.countryCallPrefix });
+          setSelectedCountry(countryInfo.filter((x) => x.code == parsedInfo.country)[0]);
+          setPhoneInputDisabled(false);
+          setDriversAge(parsedInfo.age);
 
-        if (parsedInfo.age < 18) {
-          supervisorsForm.setFieldsValue({ supervisorsFullName: parsedInfo.supervisor.fullName });
-          supervisorsForm.setFieldsValue({ supervisorsAge: parsedInfo.supervisor.age });
+          if (parsedInfo.age < 18) {
+            supervisorsForm.setFieldsValue({ supervisorsFullName: parsedInfo.supervisor.fullName });
+            supervisorsForm.setFieldsValue({ supervisorsAge: parsedInfo.supervisor.age });
+          }
         }
       }
+    } catch (e) {
+      console.log(e);
     }
   }, [loadCacheDataAction]);
 

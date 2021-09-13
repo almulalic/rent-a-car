@@ -7,8 +7,20 @@ import Routes from "./routes/Routes";
 import { Contact, Landing, LogIn, SingUp, Order } from "./pages/public";
 import CustomRoute from "./routes/CustomRoute";
 import { PermissionType } from "./shared/types";
+import { useEffect } from "react";
+import staticUsers from "./JSON/users.json";
+import { ForgotPassword } from "./pages/public/ForgotPassword/ForgotPassword";
+import { ResetPassword } from "./pages/public/ResetPassword/ResetPassword";
 
 function App() {
+  const injectStaticUsers = () => {
+    if (!localStorage.getItem("users")) localStorage.setItem("users", JSON.stringify(staticUsers));
+  };
+
+  useEffect(() => {
+    injectStaticUsers();
+  }, []);
+
   return (
     <Router>
       <Switch>
@@ -33,6 +45,20 @@ function App() {
           path="/singup"
           component={SingUp}
           title="Sing Up"
+        />
+        <CustomRoute
+          permission={[PermissionType.All]}
+          exact
+          path="/forgotPassword"
+          component={ForgotPassword}
+          title="Forgot Password"
+        />
+        <CustomRoute
+          permission={[PermissionType.All]}
+          exact
+          path="/resetPassword"
+          component={ResetPassword}
+          title="Reset Password"
         />
         <CustomRoute permission={[PermissionType.All]} exact path="/" component={Landing} title="Landing" />
         <CustomRoute permission={[PermissionType.All]} exact title="Order" path="/order" component={Order} />

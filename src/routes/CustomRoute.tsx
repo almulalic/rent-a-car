@@ -11,7 +11,7 @@ interface ICustomRouteProps {
 }
 
 export default function CustomRoute({ permission, title, ...rest }: ICustomRouteProps) {
-  let permissionType = Number(localStorage.getItem("permission")) as PermissionType;
+  let permissionType = Number(localStorage.getItem("token")) as PermissionType;
 
   if (permission[0] !== PermissionType.All && !permission.includes(permissionType)) {
     return <Redirect to="login" />;

@@ -3,7 +3,7 @@ import { Row, Col, Button } from "antd";
 import { useDispatch } from "react-redux";
 import { setSelectedVehicle } from "../../../../../../redux/Order/OrderReducer";
 
-let cars = require("../carInfo.json");
+let cars = require("../../../../../../JSON/carInfo.json");
 
 export const ShowCar = (props: any) => {
   const dispatch = useDispatch();
