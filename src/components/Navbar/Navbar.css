@@ -2,10 +2,14 @@
     background-color: #ffbf00 !important;
 }
 
+
+
 @media only screen and (max-width: 420px) {
     .menuItems{
         width: 40px;
-        right: 0;
+        /* right: 0; */
     }
-    
+    ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
+        float: left !important;
+    }
   }

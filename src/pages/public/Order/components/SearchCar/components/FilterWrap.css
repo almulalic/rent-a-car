@@ -37,3 +37,45 @@ span.ant-select-selection-placeholder {
   font-weight: 500;
   color: darkgray;
 }
+.filtersMobile{
+  display: none;
+}
+.filtersDesktop{
+  display: contents;
+}
+
+@media only screen and (max-width: 420px) {
+  .filtersMobile{
+    display: block;
+  }
+  .filtersDesktop{
+    display: none;
+  }
+  .ant-select.selectTag.selectTransVal.ant-select-single.ant-select-allow-clear.ant-select-show-arrow {
+    padding: 0;
+  }
+  .ant-select.selectTag.selectFuelVal.ant-select-single.ant-select-allow-clear.ant-select-show-arrow {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .ant-select.selectTag.selectDoorsVal.ant-select-single.ant-select-allow-clear.ant-select-show-arrow {
+    padding: 0;
+    /* width: 100% !important; */
+  }
+  .filterWrap {
+    height: auto;
+  }
+  .ant-select.selectTag.selectSeatsVal.ant-select-single.ant-select-allow-clear.ant-select-show-arrow {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .ant-col.ant-col-xs-24.ant-col-md-24.ant-col-lg-24 {
+    padding: 0;
+    margin-top: 10px;
+}
+
+  .ant-picker.ant-picker-range.rangePickerDate {
+    margin: 0;
+    /* margin-top: 10px; */
+}
+}

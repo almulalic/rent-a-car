@@ -23,10 +23,10 @@ export const Navbar = () => {
         </Col>
         <Col span={12} >
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]} className="menuItems">
-            <Menu.Item key="1">
+            {/* <Menu.Item key="1">
               <UserOutlined />
               <span style={{ marginLeft: "7px" }}>My bookings</span>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="2" onClick={() => history.push("/login")}>
               <LoginOutlined />
               <span style={{ marginLeft: "7px" }}>SignIn</span>
@@ -37,7 +37,7 @@ export const Navbar = () => {
             </Menu.Item>
             <Menu.Item key="4">
               <PhoneOutlined />
-              <span style={{ marginLeft: "7px" }}>Call Us</span>
+              <a href="tel:+1-555-555-1212" style={{ marginLeft: "7px" }}>Call Us</a>
             </Menu.Item>
 
           </Menu>

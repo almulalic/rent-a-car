@@ -43,6 +43,7 @@ code {
 
 ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
   float: right;
+  /* width: 54%; */
   background-color: rgba(0, 0, 0, 0);
 }
 
