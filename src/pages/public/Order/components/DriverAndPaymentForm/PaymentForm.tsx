@@ -1,17 +1,5 @@
-import React, { useState } from "react";
-import {
-  Form,
-  Input,
-  Select as select,
-  InputNumber,
-  Button,
-  Card,
-  DatePicker,
-  Radio,
-  Typography,
-  Alert,
-} from "antd";
-import moment from "moment";
+import { useState } from "react";
+import { Form, Input, Select as select, Button, Card, Radio, Typography, Alert } from "antd";
 import CreditCardInput from "react-credit-card-input";
 
 const formItemLayout = {
