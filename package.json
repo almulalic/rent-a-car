@@ -34,15 +34,14 @@
     "react-tooltip": "^4.2.21",
     "redux-toolkit": "^1.1.2",
     "sass": "^1.32.0",
+    "serve": "^10.1.1",
     "styled-components": "^5.3.1",
     "typescript": "^4.1.3",
-    "web-vitals": "^0.2.4",
-    "serve": "^11.3.2"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "serve -s build",
-    "build": "npm build",
-    "test": "npm test"
+    "start": "serve -l 3000 -s build",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
