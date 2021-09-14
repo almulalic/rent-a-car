@@ -45,7 +45,7 @@ export const Navbar = () => {
                   <LoginOutlined />
                   <span style={{ marginLeft: "7px" }}>SignIn</span>
                 </Menu.Item>
-                <Menu.Item key="3" onClick={() => history.push("/singup")}>
+                <Menu.Item key="3" onClick={() => history.push("/signup")}>
                   <LoginOutlined />
                   <span style={{ marginLeft: "7px" }}>SignUp</span>
                 </Menu.Item>

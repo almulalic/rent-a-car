@@ -15,6 +15,10 @@ export const LogIn = () => {
   const [areWrongCredentials, setWrongCredentials] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
+  useEffect(() => {
+    if (localStorage.getItem("token") != undefined) history.push("/landing");
+  }, []);
+
   const onFinish = (values: any) => {
     let users = JSON.parse(localStorage.getItem("users"));
 

@@ -4,7 +4,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Routes from "./routes/Routes";
-import { Contact, Landing, LogIn, SingUp, Order } from "./pages/public";
+import { Contact, Landing, LogIn, SignUp, Order } from "./pages/public";
 import CustomRoute from "./routes/CustomRoute";
 import { PermissionType } from "./shared/types";
 import { useEffect } from "react";
@@ -42,9 +42,9 @@ function App() {
         <CustomRoute
           permission={[PermissionType.All]}
           exact
-          path="/singup"
-          component={SingUp}
-          title="Sing Up"
+          path="/signup"
+          component={SignUp}
+          title="Sign Up"
         />
         <CustomRoute
           permission={[PermissionType.All]}
