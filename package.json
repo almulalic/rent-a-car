@@ -40,7 +40,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "serve -l 3000 -s build",
+    "start": "serve -s build",
     "build": "react-scripts build"
   },
   "eslintConfig": {
