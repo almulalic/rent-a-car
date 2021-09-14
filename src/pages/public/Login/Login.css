@@ -26,7 +26,7 @@
   z-index: 100000;
 }
 
-.layout{
+.layout {
   width: 100%;
   height: 100%;
   background-color: white;
@@ -44,7 +44,18 @@
   margin: 0 auto;
 }
 
-.login-form-button{
+@media only screen and (max-width: 420px) {
+  form.ant-form.ant-form-horizontal {
+    /* margin: 0 auto; */
+    width: 100% !important;
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+  
+}
+
+.login-form-button {
   width: 100% !important;
   border-color: black;
   background-color: black;
@@ -54,7 +65,6 @@ form.ant-form.ant-form-horizontal {
   width: 25%;
 }
 
-  .footerCustom{
-      display: none;
-  }
-  
+.footerCustom {
+  display: none;
+}
