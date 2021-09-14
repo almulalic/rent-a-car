@@ -6,16 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media only screen and (max-width: 420px) {
+/* @media only screen and (max-width: 420px) {
   .footerCustom{
       display: none;
   }
   
-}
+} */
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .site-layout-content {
@@ -54,14 +53,14 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
   background-color: rgba(0, 0, 0, 0);
 }
 
-
-.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: rgba(0, 0, 0, 0);
   color: #ffbf00;
-
 }
 
-.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-active {
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-active {
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -86,7 +85,8 @@ ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
   z-index: 100000;
 }
 
-.ant-menu-dark.ant-menu-horizontal > .ant-menu-item, .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
   top: 0;
   margin-top: 0;
   padding: 5px 20px;

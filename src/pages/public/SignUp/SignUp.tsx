@@ -1,4 +1,15 @@
-import { Button, Col, Form, Input, InputNumber, Layout, notification, Row, Select as select } from "antd";
+import {
+  Button,
+  Card,
+  Col,
+  Form,
+  Input,
+  InputNumber,
+  Layout,
+  notification,
+  Row,
+  Select as select,
+} from "antd";
 import form from "antd/lib/form";
 import { Content, Footer } from "antd/lib/layout/layout";
 import React, { useEffect, useState, useMemo } from "react";
@@ -7,6 +18,7 @@ import countryInfo from "../../../JSON/countryInfo.json";
 import { Navbar } from "../../../components/Navbar/Navbar";
 import { User } from "../../../redux/User/model/User";
 import { LockOutlined } from "@ant-design/icons";
+import Title from "antd/lib/typography/Title";
 
 const formItemLayout = {
   wrapperCol: { span: 24 },
@@ -131,6 +143,7 @@ export const SignUp = () => {
       const key = "updatable";
       notification.open({
         key,
+        top: 80,
         message:
           "You have successfully registered. Check your mail for activation link (disabled for now you can just log in)",
       });
@@ -146,147 +159,155 @@ export const SignUp = () => {
       <Navbar />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Content>
-        <Form form={form} {...formItemLayout} onFinish={onFinish} onFinishFailed={onFinishFailed}>
-          <h1>Register</h1>
-          {/* Full Name */}
-          <Form.Item
-            name="driversFullName"
-            label="Drivers Full Name"
-            rules={[{ required: true, message: "This field is required!" }]}
-            hasFeedback
-          >
-            <Input name="driversFullName" placeholder="John Doe" autoFocus />
-          </Form.Item>
-
-          {/* Age */}
-          <Form.Item
-            label="Drivers Age"
-            name="driversAge"
-            rules={[{ required: true, message: "This field is required!" }]}
-            tooltip={tooltipAgeMessage}
-          >
-            <InputNumber
-              name="driversAge"
-              size="middle"
-              min={16}
-              placeholder="20"
-              max={100}
-              onChange={onChange}
-            />
-          </Form.Item>
-
-          {/* Supervisor's Form */}
-          {driversAge < 18 && supervisorsMarkup}
-
-          {/* Email */}
-          <Form.Item
-            label="Email Address"
-            name="email"
-            hasFeedback
-            rules={[
-              { required: true, message: "This field is required!" },
-              { type: "email", message: "Please enter a valid email address!" },
-              ({ getFieldValue }) => ({
-                validator(_, value) {
-                  if (!value || users.filter((x) => x.emailAddress == getFieldValue("email")).length == 0) {
-                    return Promise.resolve();
-                  }
-                  return Promise.reject("Email alraedy exists!");
-                },
-              }),
-            ]}
-          >
-            <Input placeholder="johndoe@domain.com" id="email" name="email" />
-          </Form.Item>
-
-          {/* Confirm Email */}
-          <Form.Item
-            name="confirmEmail"
-            label="Confirm Email Address"
-            hasFeedback
-            rules={[
-              { required: true, message: "This field is required!" },
-              { type: "email", message: "Please enter a valid email address!" },
-              ({ getFieldValue, getFieldError }) => ({
-                validator(_, value) {
-                  if (value && getFieldValue("email") === value && getFieldError("email").length == 0) {
-                    return Promise.resolve();
-                  }
-                  return Promise.reject("Email addresses must be same!");
-                },
-              }),
-            ]}
-          >
-            <Input placeholder="johndoe@domain.com" id="confirmEmail" name="confirmEmail" />
-          </Form.Item>
-
-          {/* Country */}
-          <Form.Item
-            label="Country"
-            name="country"
-            rules={[{ required: true, message: "This field is required!" }]}
-          >
-            <Select
-              showSearch
-              size="middle"
-              style={{ width: 300 }}
-              placeholder="Utopia"
-              optionFilterProp="children"
-              onFocus={() => {}}
-              onChange={onCountrySelectChange}
-              filterOption={(input: any, option: any) =>
-                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-              }
-              rules={[
-                { required: true, message: "This field is required!" },
-                { type: "number", message: "Phone number can only contain numbers 0-9" },
-              ]}
+        <div className="site-layout-content form-content">
+          <Card bordered className="resetPasswordForm" style={{ background: "#f4f3f0", opacity: "0.9" }}>
+            <Title level={3}>Sign Up</Title>
+            <br />
+            <Form
+              form={form}
+              {...formItemLayout}
+              labelAlign="left"
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
             >
-              {countryList}
-            </Select>
-          </Form.Item>
+              {/* Full Name */}
+              <Form.Item
+                name="driversFullName"
+                label="Drivers Full Name"
+                rules={[{ required: true, message: "This field is required!" }]}
+                hasFeedback
+              >
+                <Input name="driversFullName" placeholder="John Doe" autoFocus />
+              </Form.Item>
 
-          {/* Contact Number */}
-          <Form.Item
-            name="contactNumber"
-            label="Contact Number"
-            tooltip={selectedCountry.phonePrefixes.length === 0 ? "Select your country first" : ""}
-            rules={[{ required: true, message: "Please input your phone number!" }]}
-          >
-            <Input
-              placeholder="123 456 789"
-              size="middle"
-              addonBefore={phonePrefixOptions}
-              disabled={isPhoneInputDisabled}
-            />
-          </Form.Item>
+              {/* Age */}
+              <Form.Item
+                label="Drivers Age"
+                name="driversAge"
+                rules={[{ required: true, message: "This field is required!" }]}
+                tooltip={tooltipAgeMessage}
+              >
+                <InputNumber
+                  name="driversAge"
+                  size="middle"
+                  min={16}
+                  placeholder="20"
+                  max={100}
+                  onChange={onChange}
+                />
+              </Form.Item>
 
-          {/* Password */}
-          <Form.Item
-            name="password"
-            label="Password"
-            rules={[{ required: true, message: "Please input your phone number!" }]}
-          >
-            <Input
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Password"
-            />
-          </Form.Item>
+              {/* Supervisor's Form */}
+              {driversAge < 18 && supervisorsMarkup}
 
-          <div className="twoButtonRow login-form-button">
-            <Button type="primary" htmlType="submit" loading={isLoading}>
-              Submit
-            </Button>
-          </div>
-        </Form>
+              {/* Email */}
+              <Form.Item
+                label="Email Address"
+                name="email"
+                hasFeedback
+                rules={[
+                  { required: true, message: "This field is required!" },
+                  { type: "email", message: "Please enter a valid email address!" },
+                  ({ getFieldValue }) => ({
+                    validator(_, value) {
+                      if (
+                        !value ||
+                        users.filter((x) => x.emailAddress == getFieldValue("email")).length == 0
+                      ) {
+                        return Promise.resolve();
+                      }
+                      return Promise.reject("Email alraedy exists!");
+                    },
+                  }),
+                ]}
+              >
+                <Input placeholder="johndoe@domain.com" id="email" name="email" />
+              </Form.Item>
+
+              {/* Confirm Email */}
+              <Form.Item
+                name="confirmEmail"
+                label="Confirm Email Address"
+                hasFeedback
+                rules={[
+                  { required: true, message: "This field is required!" },
+                  { type: "email", message: "Please enter a valid email address!" },
+                  ({ getFieldValue, getFieldError }) => ({
+                    validator(_, value) {
+                      if (value && getFieldValue("email") === value && getFieldError("email").length == 0) {
+                        return Promise.resolve();
+                      }
+                      return Promise.reject("Email addresses must be same!");
+                    },
+                  }),
+                ]}
+              >
+                <Input placeholder="johndoe@domain.com" id="confirmEmail" name="confirmEmail" />
+              </Form.Item>
+
+              {/* Country */}
+              <Form.Item
+                label="Country"
+                name="country"
+                rules={[{ required: true, message: "This field is required!" }]}
+              >
+                <Select
+                  showSearch
+                  size="middle"
+                  style={{ width: 300 }}
+                  placeholder="Utopia"
+                  optionFilterProp="children"
+                  onFocus={() => {}}
+                  onChange={onCountrySelectChange}
+                  filterOption={(input: any, option: any) =>
+                    option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                  }
+                  rules={[
+                    { required: true, message: "This field is required!" },
+                    { type: "number", message: "Phone number can only contain numbers 0-9" },
+                  ]}
+                >
+                  {countryList}
+                </Select>
+              </Form.Item>
+
+              {/* Contact Number */}
+              <Form.Item
+                name="contactNumber"
+                label="Contact Number"
+                tooltip={selectedCountry.phonePrefixes.length === 0 ? "Select your country first" : ""}
+                rules={[{ required: true, message: "Please input your phone number!" }]}
+              >
+                <Input
+                  placeholder="123 456 789"
+                  size="middle"
+                  addonBefore={phonePrefixOptions}
+                  disabled={isPhoneInputDisabled}
+                />
+              </Form.Item>
+
+              {/* Password */}
+              <Form.Item
+                name="password"
+                label="Password"
+                rules={[{ required: true, message: "Please input your phone number!" }]}
+              >
+                <Input
+                  prefix={<LockOutlined className="site-form-item-icon" />}
+                  type="password"
+                  placeholder="Password"
+                />
+              </Form.Item>
+
+              <div className="twoButtonRow login-form-button">
+                <Button type="primary" htmlType="submit" loading={isLoading}>
+                  Submit
+                </Button>
+              </div>
+            </Form>
+          </Card>
+        </div>
       </Content>
       <Row>
         <Col span={24}>

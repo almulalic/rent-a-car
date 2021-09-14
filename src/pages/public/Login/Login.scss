@@ -32,6 +32,41 @@
   background-color: white;
 }
 
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.resetPasswordForm {
+  min-width: 25%;
+}
+
+.ant-form-item-control {
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.formItemCheckbox .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1300px) {
+  .resetPasswordForm {
+    min-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  .resetPasswordForm {
+    min-width: 40%;
+  }
+
+  .form-content {
+  }
+}
 /* .ant-layout-content {
   margin: auto;
 
@@ -51,8 +86,7 @@
     margin: 0;
     padding-left: 30px;
     padding-right: 30px;
-}
-  
+  }
 }
 
 .login-form-button {
@@ -62,9 +96,8 @@
 }
 form.ant-form.ant-form-horizontal {
   margin: 0 auto;
-  width: 25%;
 }
 
 .footerCustom {
-  display: none;
+  background-color: #dddddc !important;
 }
