@@ -81,6 +81,7 @@ export const LogIn = () => {
       <br />
       <br />
       <br />
+      
       <Content>
         <Form
           name="normal_login"
@@ -91,6 +92,8 @@ export const LogIn = () => {
           autoComplete="off"
           onFinishFailed={onFailedSubmit}
         >
+                <h1>Log In</h1>
+
           <Form.Item
             name="email"
             rules={[

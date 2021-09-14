@@ -154,6 +154,7 @@ export const SignUp = () => {
       <br />
       <Content>
         <Form form={form} {...formItemLayout} onFinish={onFinish} onFinishFailed={onFinishFailed}>
+          <h1>Register</h1>
           {/* Full Name */}
           <Form.Item
             name="driversFullName"
@@ -280,7 +281,7 @@ export const SignUp = () => {
             />
           </Form.Item>
 
-          <div className="twoButtonRow">
+          <div className="twoButtonRow login-form-button">
             <Button type="primary" htmlType="submit" loading={isLoading}>
               Submit
             </Button>
