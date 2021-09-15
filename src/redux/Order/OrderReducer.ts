@@ -17,7 +17,7 @@ interface IOrderReducerInitialState {
   pickupAddress: string;
 }
 
-export const DEFAULT_ADDRESS = "71000 Sarajevo, adresa rentakara 13";
+export const DEFAULT_ADDRESS = "71000 Sarajevo, Adresa 13";
 export const initialState: IOrderReducerInitialState = {
   filters: {
     transmission: "",

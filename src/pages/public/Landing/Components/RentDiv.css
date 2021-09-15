@@ -1,51 +1,51 @@
-.rentDiv{
-    background-color: #ffbf00;
-    width: 100%;
-    height: auto;
-    padding: 10% 10%;
+.rentDiv {
+  background-color: #ffbf00;
+  width: 100%;
+  height: auto;
+  padding: 10% 10%;
 }
 
-.rentDiv h1{
-    font-size: 30px;
-    font-weight: bold;
+.rentDiv h1 {
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.rentDiv h3{
-    font-size: 25px;
-    font-weight: 500;
+.rentDiv h3 {
+  font-size: 25px;
+  font-weight: 500;
 }
 
-.rentDiv p{
-    font-size: 15px;
+.rentDiv p {
+  font-size: 15px;
 }
 
-#nevid{
-    color: #ffbf00;
+#nevid {
+  color: #ffbf00;
 }
 
-button.ant-btn.ant-btn-primary{
-    width: 15%;
-    border-color: black;
-    background-color: black;
+button.ant-btn.ant-btn-primary {
+  width: 15%;
+  border-color: #131416;
+  background-color: #131416;
 }
 
 @media only screen and (max-width: 600px) {
-    button.ant-btn.ant-btn-primary{
-        width: 100%;
-    }
-    .rentDiv h1{
-        font-size: 25px;
-        font-weight: bold;
-    }
-    .rentDiv h3{
-        font-size: 15px;
-        font-weight: 500;
-    }
-    .rentDiv p{
-        font-size: 10px;
-        text-align:justify;
-    }
-    .rentDiv{
-        padding: 15% 10%;
-    }
+  button.ant-btn.ant-btn-primary {
+    width: 100%;
   }
+  .rentDiv h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .rentDiv h3 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .rentDiv p {
+    font-size: 10px;
+    text-align: justify;
+  }
+  .rentDiv {
+    padding: 15% 10%;
+  }
+}

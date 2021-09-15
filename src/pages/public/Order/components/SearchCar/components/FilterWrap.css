@@ -1,5 +1,5 @@
 .filterWrap {
-  background-color: #141414;
+  background-color: #131416;
   width: 90%;
   height: 5rem;
   margin: 0 auto;
@@ -37,18 +37,18 @@ span.ant-select-selection-placeholder {
   font-weight: 500;
   color: darkgray;
 }
-.filtersMobile{
+.filtersMobile {
   display: none;
 }
-.filtersDesktop{
+.filtersDesktop {
   display: contents;
 }
 
 @media only screen and (max-width: 420px) {
-  .filtersMobile{
+  .filtersMobile {
     display: block;
   }
-  .filtersDesktop{
+  .filtersDesktop {
     display: none;
   }
   .ant-select.selectTag.selectTransVal.ant-select-single.ant-select-allow-clear.ant-select-show-arrow {
@@ -72,10 +72,10 @@ span.ant-select-selection-placeholder {
   .ant-col.ant-col-xs-24.ant-col-md-24.ant-col-lg-24 {
     padding: 0;
     margin-top: 10px;
-}
+  }
 
   .ant-picker.ant-picker-range.rangePickerDate {
     margin: 0;
     /* margin-top: 10px; */
-}
+  }
 }

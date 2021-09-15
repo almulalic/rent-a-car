@@ -37,6 +37,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%;
+  padding: 15vh;
 }
 
 .resetPasswordForm {
@@ -91,8 +93,8 @@
 
 .login-form-button {
   width: 100% !important;
-  border-color: black;
-  background-color: black;
+  border-color: #131416;
+  background-color: #131416;
 }
 form.ant-form.ant-form-horizontal {
   margin: 0 auto;

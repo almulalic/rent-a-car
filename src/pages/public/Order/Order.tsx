@@ -9,7 +9,7 @@ import { SearchCar } from "./components/SearchCar/SearchCar";
 import { VehicleDetails } from "./components/VehicleDetails/VehicleDetails";
 
 import "./Order.scss";
-import { PersonalizedFooter } from "../../../components/Footer/Footer";
+import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
 import { ConfirmOrder } from "./components/ConfirmOrder/ConfirmOrder";
 
 export const Order = () => {

@@ -7,7 +7,7 @@
 }
 
 .ourCars h1 {
-  color: black;
+  color: #131416;
   font-size: 40px;
   line-height: 0.2;
   font-weight: bold;
@@ -23,24 +23,24 @@
 }
 
 .ourCars h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 6%;
-  }
-
-  .ourCars h4 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 6%;
-  }
-
-#carousel{
-    padding-top: 10%;
-    height: 700px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 6%;
 }
 
-.col{
-    color: white;
+.ourCars h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 6%;
+}
+
+#carousel {
+  padding-top: 10%;
+  height: 700px;
+}
+
+.col {
+  color: white;
 }

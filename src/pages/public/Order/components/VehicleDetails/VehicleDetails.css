@@ -16,7 +16,7 @@
 }
 
 .lastDiv {
-  /* border: 1px solid black; */
+  /* border: 1px solid #131416; */
   background-color: white;
   padding: 2% 2% 2% 2%;
   /* box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
@@ -25,18 +25,18 @@
 
 #btn3 {
   width: 100%;
-  background-color: #141414;
+  background-color: #131416;
   margin-top: 2em;
 }
 
 #btn4 {
   width: 100%;
-  background-color: #141414;
+  background-color: #131416;
 }
 
 .priceSummary {
   background-color: lightgray;
-  /* border: 1px solid black; */
+  /* border: 1px solid #131416; */
   /* box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
     -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
   padding-left: 5%;
@@ -46,7 +46,7 @@
 
 .total {
   background-color: lightgray;
-  /* border: 2px solid black; */
+  /* border: 2px solid #131416; */
   /* box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
     -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
 
@@ -60,7 +60,7 @@
 
 .billInfo {
   background-color: white;
-  /* border: 1px solid black; */
+  /* border: 1px solid #131416; */
   /* box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
     -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
 
@@ -74,7 +74,7 @@
 }
 
 .infos h2 {
-  color: black;
+  color: #131416;
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {

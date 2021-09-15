@@ -6,6 +6,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
 import "./Login.scss";
 import Title from "antd/lib/typography/Title";
+import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
 
 export const LogIn = () => {
   const { Content, Footer } = Layout;
@@ -48,6 +49,7 @@ export const LogIn = () => {
         notification.open({
           key,
           top: 80,
+          type: "info",
           message: "You have successfully logged in.",
         });
         history.push("/landing");
@@ -147,13 +149,7 @@ export const LogIn = () => {
           </Card>
         </div>
       </Content>
-      <Row>
-        <Col span={24}>
-          <Footer className="footerCustom" style={{ textAlign: "center" }}>
-            Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
-          </Footer>
-        </Col>
-      </Row>
+      <PersonalizedFooter />
     </Layout>
   );
 };

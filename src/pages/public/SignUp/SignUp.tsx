@@ -1,6 +1,7 @@
 import {
   Button,
   Card,
+  Checkbox,
   Col,
   Form,
   Input,
@@ -9,9 +10,10 @@ import {
   notification,
   Row,
   Select as select,
+  Typography,
 } from "antd";
 import form from "antd/lib/form";
-import { Content, Footer } from "antd/lib/layout/layout";
+import { Content } from "antd/lib/layout/layout";
 import React, { useEffect, useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 import countryInfo from "../../../JSON/countryInfo.json";
@@ -19,14 +21,23 @@ import { Navbar } from "../../../components/Navbar/Navbar";
 import { User } from "../../../redux/User/model/User";
 import { LockOutlined } from "@ant-design/icons";
 import Title from "antd/lib/typography/Title";
+import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
 
 const formItemLayout = {
-  wrapperCol: { span: 24 },
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 8 },
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 16 },
+  },
 };
 
 export const SignUp = () => {
   const Select = select as any;
   const { Option } = Select;
+  const { Text } = Typography;
 
   const history = useHistory();
   const [form] = Form.useForm();
@@ -255,7 +266,6 @@ export const SignUp = () => {
                 <Select
                   showSearch
                   size="middle"
-                  style={{ width: 300 }}
                   placeholder="Utopia"
                   optionFilterProp="children"
                   onFocus={() => {}}
@@ -300,22 +310,23 @@ export const SignUp = () => {
                 />
               </Form.Item>
 
-              <div className="twoButtonRow login-form-button">
+              <div className=" login-form-button">
                 <Button type="primary" htmlType="submit" loading={isLoading}>
                   Submit
                 </Button>
               </div>
+              <p></p>
+              <Text type="secondary">
+                By accepting this form you agree to the{" "}
+                <a href="https://www.dummies.com/terms-of-use/" target="_blank">
+                  terms and conditions
+                </a>
+              </Text>
             </Form>
           </Card>
         </div>
       </Content>
-      <Row>
-        <Col span={24}>
-          <Footer className="footerCustom" style={{ textAlign: "center" }}>
-            Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
-          </Footer>
-        </Col>
-      </Row>
+      <PersonalizedFooter />
     </Layout>
   );
 };

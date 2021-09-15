@@ -6,6 +6,7 @@ import { Navbar } from "../../../components/Navbar/Navbar";
 import { useHistory } from "react-router-dom";
 import Title from "antd/lib/typography/Title";
 import "../Login/Login.scss";
+import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
 
 export const ResetPassword = (props) => {
   const [form] = Form.useForm();
@@ -157,13 +158,7 @@ export const ResetPassword = (props) => {
           </Card>
         </div>
       </Content>
-      <Row>
-        <Col span={24}>
-          <Footer className="footerCustom" style={{ textAlign: "center" }}>
-            Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
-          </Footer>
-        </Col>
-      </Row>
+      <PersonalizedFooter />
     </Layout>
   );
 };

@@ -37,22 +37,24 @@ export const ConfirmOrder = (props: any) => {
       </Row>
       <Row>
         <Col xs={24} md={24} lg={24}>
-          <div className="billInfo">
-            <ul>
-              {currentOrder.additionalOptions.map((x: IAdditionalOption) => {
-                return x.value === "pet" || x.value === "driver" ? (
-                  <li>
-                    {x.label}: ${x.price} x {currentOrder.totalDays}{" "}
-                    {currentOrder.totalDays === 1 ? "day" : "days"} = ${x.price * currentOrder.totalDays}
-                  </li>
-                ) : (
-                  <li>
-                    {x.label}: ${x.price}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          {currentOrder.additionalOptions.length != 0 && (
+            <div className="billInfo">
+              <ul>
+                {currentOrder.additionalOptions.map((x: IAdditionalOption) => {
+                  return x.value === "pet" || x.value === "driver" ? (
+                    <li>
+                      {x.label}: ${x.price} x {currentOrder.totalDays}{" "}
+                      {currentOrder.totalDays === 1 ? "day" : "days"} = ${x.price * currentOrder.totalDays}
+                    </li>
+                  ) : (
+                    <li>
+                      {x.label}: ${x.price}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
         </Col>
         <Col xs={24} md={24} lg={24}>
           <div className="billInfo">

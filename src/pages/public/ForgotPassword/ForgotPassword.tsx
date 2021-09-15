@@ -5,6 +5,7 @@ import { UserOutlined } from "@ant-design/icons";
 import { Navbar } from "../../../components/Navbar/Navbar";
 import { useHistory } from "react-router-dom";
 import Title from "antd/lib/typography/Title";
+import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
 
 export const ForgotPassword = () => {
   const [form] = Form.useForm();
@@ -31,6 +32,11 @@ export const ForgotPassword = () => {
         notification.open({
           key,
           top: 80,
+          type: "info",
+          style: {
+            backgroundColor: "#131416",
+            color: "#ffbf00",
+          },
           message:
             "You have successfully requested password reset. Check your email to continue (and message below).",
         });
@@ -97,14 +103,14 @@ export const ForgotPassword = () => {
               </Form.Item>
 
               {isValid && (
-                <Text type="warning">
+                <Text type="warning" className="forgotPasswordWarning">
                   Account with provided email exists and in a non-development scenario you would get a token
                   (sent on your mail) for reseting the password but for now you can{" "}
                   <a
                     onClick={() => history.push(`/resetPassword?token=${token(form.getFieldValue("email"))}`)}
                   >
                     click on this link
-                  </a>
+                  </a>{" "}
                   to reset your password.
                 </Text>
               )}
@@ -114,13 +120,7 @@ export const ForgotPassword = () => {
           </Card>
         </div>
       </Content>
-      <Row>
-        <Col span={24}>
-          <Footer className="footerCustom" style={{ textAlign: "center" }}>
-            Rent A Car ©2021 Created by Ilhan Licina | Esmir Isic | Almir Mulalic
-          </Footer>
-        </Col>
-      </Row>
+      <PersonalizedFooter />
     </Layout>
   );
 };

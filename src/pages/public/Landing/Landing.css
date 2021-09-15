@@ -10,7 +10,6 @@ body {
   .footerCustom{
       display: none;
   }
-  
 } */
 
 code {
@@ -43,7 +42,7 @@ code {
   margin: 16px 0 16px 24px;
 }
 [data-theme="dark"] .site-layout-content {
-  background: #141414;
+  background: #131416;
 }
 
 ul.ant-menu.ant-menu-dark.ant-menu-root.ant-menu-horizontal {
@@ -117,7 +116,7 @@ li.ant-menu-item {
   width: 40;
   line-height: "40px";
   border-radius: 0;
-  background-color: "black";
+  background-color: "#131416";
   color: "#fff";
   text-align: "center";
   font-size: 14;

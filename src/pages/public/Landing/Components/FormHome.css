@@ -15,12 +15,12 @@
 }
 
 #head {
-  background-color: black;
+  background-color: #131416;
 }
 
 #body {
   padding-left: 2%;
-    padding-right: 2%;
+  padding-right: 2%;
   background-color: white;
   height: auto;
   text-align: center;
@@ -45,8 +45,8 @@
 }
 #btn {
   width: 25%;
-  border-color: black;
-  background-color: black;
+  border-color: #131416;
+  background-color: #131416;
 }
 
 .ant-space.ant-space-vertical {
@@ -57,7 +57,7 @@
 .ant-picker {
   width: 100%;
   /* border: 0;
-    border-bottom: 1px solid black; */
+    border-bottom: 1px solid #131416; */
 }
 
 .ant-picker:hover,
