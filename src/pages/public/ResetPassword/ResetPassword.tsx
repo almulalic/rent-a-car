@@ -59,7 +59,6 @@ export const ResetPassword = (props) => {
     setValid(false);
   };
 
-  const passwordValidationRegex = new RegExp(`^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[^\w\s])\S{8,}$`);
   function ascii(a) {
     return a.charCodeAt(0);
   }

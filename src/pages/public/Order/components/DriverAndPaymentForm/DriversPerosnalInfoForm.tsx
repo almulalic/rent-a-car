@@ -26,7 +26,7 @@ export const DriversPerosnalInfoForm = ({
         loadCacheDataAction
       ) {
         let parsedInfo: IPersonalInfo = JSON.parse(localStorage.getItem("personalInfo"));
-        console.log(parsedInfo);
+
         if (parsedInfo.age != 0) {
           form.setFieldsValue({ driversFullName: parsedInfo.fullName });
           form.setFieldsValue({ driversAge: parsedInfo.age });

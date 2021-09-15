@@ -28,7 +28,7 @@ export const Navbar = () => {
           <div className="logo">
             <a href="/">
               <h1>
-                Logo<span>Go</span>
+                Rent A <span>Car</span>
               </h1>
             </a>
           </div>

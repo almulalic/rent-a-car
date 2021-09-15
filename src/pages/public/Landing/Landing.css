@@ -31,6 +31,7 @@ code {
 .logo h1 {
   font-size: 30px;
   color: white;
+  width: 170px;
 }
 
 .logo h1 span {
