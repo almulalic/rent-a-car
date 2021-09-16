@@ -8,10 +8,14 @@
   padding-bottom: 5em;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 700px) {
   .details {
     padding-left: 3%;
     padding-right: 3%;
+  }
+
+  .lastDiv h1 {
+    font-size: 28px !important;
   }
 }
 
@@ -58,6 +62,31 @@
   text-align: right;
 }
 
+.lastDiv {
+  background: #131416;
+  color: white;
+}
+
+.lastDiv h1 {
+  color: #ffbf00;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.infos .price {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.additionalOptions .ant-checkbox-wrapper {
+  color: white !important;
+}
+
+.additionalOptions .ant-checkbox-inner::after {
+  border-color: black !important;
+}
+
 .billInfo {
   background-color: white;
   /* border: 1px solid #131416; */
@@ -70,11 +99,60 @@
 }
 
 .vehicleImg {
-  width: 100%;
+  width: 20vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .vehicleImg {
+    width: 55vw;
+  }
 }
 
 .infos h2 {
   color: #131416;
+  text-align: center !important;
+  padding: 10px !important;
+}
+
+.details div {
+  background: #131416;
+}
+
+.detailsBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.detailsBtn .ant-btn {
+  width: 25% !important;
+  justify-self: flex-end;
+}
+
+@media only screen and (max-width: 740px) {
+  .detailsBtn .ant-btn {
+    width: 100% !important;
+    justify-self: flex-end;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .lastDiv h1 {
+    padding: 0;
+    font-size: 24px;
+  }
+}
+
+.infoinfo {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.carCol {
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
 }
 
 .ant-checkbox-checked .ant-checkbox-inner {

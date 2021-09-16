@@ -22,7 +22,6 @@ export const SearchCar = (props) => {
   useEffect(() => {
     let params = document.location.search.replace("?", "").split("&");
     let state = Object.assign({}, filterState);
-
     if (params.length > 0 && params[0].split("=")[1] != undefined) {
       let value = params[0].split("=")[1];
       state["transmission"] = value;
@@ -35,10 +34,7 @@ export const SearchCar = (props) => {
 
     if (params.length > 2 && params[1].split("=")[1] != undefined) {
       let dates = params[2].split("=")[1].split(",");
-      onFilterStateChange("reservationPeriod", [
-        moment(dates[0], "DD/MM/yyyy"),
-        moment(dates[1], "DD/MM/yyyy"),
-      ]);
+      state["reservationPeriod"] = [moment(dates[0], "DD/MM/yyyy"), moment(dates[1], "DD/MM/yyyy")];
     }
 
     setFilterState(state);

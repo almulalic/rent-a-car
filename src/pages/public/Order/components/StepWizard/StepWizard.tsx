@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useState } from "react";
 
 import { Steps, Modal, Button, Typography } from "antd";
 import ReactTooltip from "react-tooltip";
@@ -50,9 +50,29 @@ export const StepWizard = ({ currentStep, setCurrentStep }: any) => {
     } else setCurrentStep(step);
   };
 
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener("resize", updateSize);
+      updateSize();
+      return () => window.removeEventListener("resize", updateSize);
+    }, []);
+    return size;
+  }
+
+  const [width, height] = useWindowSize();
+
   return (
     <div className="Order-StepsContainer">
-      <Steps responsive={true} current={currentStep} onChange={(step) => changeCurrentStep(step)}>
+      <Steps
+        responsive={true}
+        direction={width <= 1110 ? "vertical" : "horizontal"}
+        current={currentStep}
+        onChange={(step) => changeCurrentStep(step)}
+      >
         <Step
           type="navigation"
           status={currentStep <= 0 ? "wait" : "finish"}

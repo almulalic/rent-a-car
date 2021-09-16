@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import moment from "moment";
+import { Moment } from "moment";
 import { IOrder, Order, IVehicle, Vehicle, IAdditionalOption } from "./models";
 
 export interface IOrderFilters {
@@ -6,8 +8,8 @@ export interface IOrderFilters {
   fuel: string;
   doors: string;
   seats: string;
-  reservationPeriod: [];
-  [index: string]: string | [];
+  reservationPeriod: [Moment, Moment];
+  [index: string]: string | [] | [Moment, Moment];
 }
 
 interface IOrderReducerInitialState {
@@ -24,7 +26,7 @@ export const initialState: IOrderReducerInitialState = {
     fuel: "",
     doors: "",
     seats: "",
-    reservationPeriod: [],
+    reservationPeriod: [moment(), moment().add(1, "day")],
   },
   currentOrder: new Order(),
   dropoffAddress: DEFAULT_ADDRESS,
@@ -40,10 +42,12 @@ const orderReducerSlice = createSlice({
 
       if (action.payload.label == "reservationPeriod") {
         state.currentOrder.loadFromStroage();
-        state.currentOrder.totalDays = state.filters.reservationPeriod[1].diff(
-          state.filters.reservationPeriod[0],
-          "days"
-        );
+        if (state.filters.reservationPeriod.length > 1) {
+          state.currentOrder.totalDays = state.filters.reservationPeriod[1].diff(
+            state.filters.reservationPeriod[0],
+            "days"
+          );
+        }
         state.currentOrder.serialize();
       }
     },

@@ -6,6 +6,7 @@
   top: 2rem;
   padding: 10px;
   position: relative;
+  height: auto;
 }
 
 .childWrap {
@@ -15,6 +16,7 @@
   padding-left: 2%;
   padding-right: 2%;
 }
+
 .childWrap h1 {
   color: white;
   margin: 0;
@@ -30,7 +32,50 @@
 }
 
 .rangePickerDate {
-  margin: 1rem;
+  width: 95.5%;
+  margin-left: 15px;
+}
+
+.btnWrapCol {
+  display: flex;
+  justify-content: center;
+}
+
+.filterWrap h1 {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .rangePickerDate {
+    width: 96.5%;
+
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .rangePickerDate {
+    width: 97.5%;
+
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .rangePickerDate {
+    width: 96.5%;
+
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .rangePickerDate {
+    width: 100%;
+
+    margin-left: 15px;
+  }
 }
 
 span.ant-select-selection-placeholder {

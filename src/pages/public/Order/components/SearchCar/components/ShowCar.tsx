@@ -25,38 +25,31 @@ export const ShowCar = (props: any) => {
         )
         .map((car: any) => (
           <div className="showCar2">
-            <Row>
-              <Col xs={24} md={8} lg={8}>
+            <Row justify="space-between" align="middle">
+              <Col xs={23} md={23} lg={23} className="header">
+                <h1>
+                  {car.manufacturer} {car.name}{" "}
+                </h1>
+              </Col>
+              <Col xs={1} md={1} lg={1}></Col>
+              <Col xs={24} sm={24} md={8} lg={8} className="colImgContainer">
                 <img src={car.img} alt="car" />
               </Col>
-              <Col xs={24} md={8} lg={8}>
-                <div className="specs">
-                  <Row>
-                    <Col xs={1} md={1} lg={1}></Col>
-                    <Col xs={23} md={23} lg={23}>
-                      <h1>
-                        {car.manufacturer} {car.name}{" "}
-                      </h1>
-                    </Col>
-                  </Row>
-                  <Row className="rowic">
-                    <Col xs={1} md={1} lg={1}></Col>
-                    <Col xs={4} md={4} lg={4}>
+              <Col xs={24} sm={24} md={8} lg={8}>
+                <div className="specs" style={{ alignSelf: "flex-start", justifySelf: "flex-start" }}>
+                  <Row className="rowic" justify="space-between">
+                    <Col md={12} lg={6}>
                       <div className="specs2">{car.transmission}</div>
                     </Col>
-                    <Col xs={2} md={2} lg={2}></Col>
-                    <Col xs={4} md={4} lg={4}>
+                    <Col md={12} lg={6}>
                       <div className="specs2">{car.doors} doors</div>
                     </Col>
-                    <Col xs={2} md={2} lg={2}></Col>
-                    <Col xs={4} md={4} lg={4}>
+                    <Col md={12} lg={6}>
                       <div className="specs2">{car.seats} seats</div>
                     </Col>
-                    <Col xs={2} md={2} lg={2}></Col>
-                    <Col xs={4} md={4} lg={4}>
+                    <Col md={12} lg={6}>
                       <div className="specs2">{car.fuel}</div>
                     </Col>
-                    <Col xs={1} md={1} lg={1}></Col>
                   </Row>
                   <Row>
                     <ul>
@@ -68,14 +61,12 @@ export const ShowCar = (props: any) => {
                   </Row>
                 </div>
               </Col>
-              <Col xs={1} md={1} lg={1}></Col>
-              <Col xs={24} md={6} lg={6}>
+              <Col xs={24} sm={24} md={6} lg={6}>
                 <Row className="bookNow">
-                  <Col xs={2} md={2} lg={2}></Col>
-                  <Col xs={10} md={10} lg={10}>
+                  <Col xs={24} md={24} lg={12} style={{ textAlign: "center" }}>
                     <h1>${car.price} / Day</h1>
                   </Col>
-                  <Col xs={10} md={10} lg={10}>
+                  <Col xs={24} md={24} lg={12} className="btnWrapCol">
                     <Button id="btn2" type="primary" size="large" onClick={() => onBookActionClicked(car)}>
                       Book Now
                     </Button>
@@ -83,7 +74,6 @@ export const ShowCar = (props: any) => {
                   <Col xs={2} md={2} lg={2}></Col>
                 </Row>
               </Col>
-              <Col xs={1} md={1} lg={1}></Col>
             </Row>
           </div>
         ))}

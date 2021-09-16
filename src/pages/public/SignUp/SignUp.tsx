@@ -22,6 +22,7 @@ import { User } from "../../../redux/User/model/User";
 import { LockOutlined } from "@ant-design/icons";
 import Title from "antd/lib/typography/Title";
 import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFooter";
+import "./SignUp.scss"
 
 const formItemLayout = {
   labelCol: {

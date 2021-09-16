@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Checkbox } from "antd";
 import { useState } from "react";
 import { Row, Col, Form, Input } from "antd";
@@ -44,16 +44,31 @@ export const AdditionalOptions = ({ form }: any) => {
     else dispatch(removeAdditionalOption(option));
   }
 
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener("resize", updateSize);
+      updateSize();
+      return () => window.removeEventListener("resize", updateSize);
+    }, []);
+    return size;
+  }
+
+  const [width, height] = useWindowSize();
+
   return (
     <>
       <Checkbox.Group
         style={{ width: "100%" }}
         defaultValue={currentOrder.additionalOptions.map((x: IAdditionalOption) => x.value)}
       >
-        <Row>
+        <Row justify={width <= 780 ? "center" : "space-between"}>
           {additionalOptions.map((x: IAdditionalOption) => {
             return (
-              <Col span={8}>
+              <Col xs={24} sm={24} md={12} lg={8} xl={8} style={{ maxWidth: "240px" }}>
                 <Checkbox value={x.value} onChange={(e) => onChange(e, x)}>
                   {`${x.label} (+${x.price}$${x.value == "pet" || x.value == "driver" ? "/day" : ""})`}
                   <InfoCircleOutlined
@@ -77,6 +92,7 @@ export const AdditionalOptions = ({ form }: any) => {
               value={pickupAddress === DEFAULT_ADDRESS ? "" : pickupAddress}
               onChange={onPickupAddressChange}
               allowClear
+              autoFocus
             />
           </Form.Item>
         )}
@@ -87,6 +103,7 @@ export const AdditionalOptions = ({ form }: any) => {
               value={dropoffAddress === DEFAULT_ADDRESS ? "" : dropoffAddress}
               onChange={onDropoffAddressChange}
               allowClear
+              autoFocus
             />
           </Form.Item>
         )}

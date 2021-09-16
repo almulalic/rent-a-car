@@ -1,52 +1,123 @@
 .showCar2 {
-  /* height: 20rem; */
-  background-color: white;
+  background-color: #131416;
+  color: white;
   width: 90%;
-  /* top: 5rem; */
   padding: 10px;
   position: relative;
-  box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+  box-shadow: 0 9px 0px 0px #131416, 0 -9px 0px 0px #131416, 12px 0 15px -4px rgba(31, 73, 125, 0.8),
     -12px 0 15px -4px rgba(31, 73, 125, 0.8);
   margin: 5rem auto;
+  height: auto;
+}
+
+.header h1 {
+  color: #ffbf00;
+  font-size: 2.1vw;
+  margin-bottom: 2.5vh;
+  margin-left: 5vw;
 }
 
 .showCar2 img {
-  height: 100%;
-  width: 100%;
+  width: 27vw;
+  margin-left: 2.5vw;
+}
+
+@media only screen and (max-width: 420px) {
+  .colImgContainer {
+    justify-items: center !important;
+  }
+
+  .colImgContainer img {
+    width: 40vw;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .colImgContainer img {
+    width: 35vw;
+  }
+
+  .colImgContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bookNow {
+    position: relative;
+    margin: 20px !important;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 .specs {
   padding-top: 5%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .bookNow {
   padding-top: 5%;
   padding-bottom: 5%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
   /* text-align: center; */
-  box-shadow: 1px 3px 5px 0px gray;
+  box-shadow: 1px 3px 5px 0px rgba(87, 87, 78, 0.733);
+  background: #ffbf00;
+}
+
+.bookNow h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.bookNow .ant-btn:hover {
+  color: #ffbf00;
+}
+
+.details .ant-checkbox-inner {
+  background: black !important;
 }
 
 .specs2 {
   text-align: center;
-  background-color: #131416;
-  color: white;
+  background-color: #ffbf00;
+  color: black;
   border-radius: 5px;
   text-transform: capitalize;
+}
+
+#btn2 {
+  width: 95% !important;
+  align-self: center;
+}
+
+@media only screen and (max-width: 420px) {
+  .specs2 {
+    font-size: 10px;
+    padding: 6px;
+  }
 }
 
 .specs ul {
   text-align: left;
   padding-top: 5%;
+}
+
+.details .price {
+  font-weight: bold;
+  color: #ffbf00;
+  padding: 5px;
+  border-bottom: 1px solid #ffbf00c0;
 }
 
 #btn2 {
@@ -58,11 +129,17 @@
 .bookNow h1 {
   margin-top: 2px;
 }
+
 @media only screen and (max-width: 420px) {
   .specs {
     position: relative;
     /* padding-top: 25%; */
   }
+
+  .header h1 {
+    text-align: center;
+  }
+
   .bookNow {
     /* padding-top: 100%; */
     box-shadow: none;
