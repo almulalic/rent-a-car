@@ -64,5 +64,8 @@
   },
   "devDependencies": {
     "@types/luxon": "^2.0.2"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
