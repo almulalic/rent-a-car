@@ -9,8 +9,8 @@ import { PersonalizedFooter } from "../../../components/Footer/PersonalizedFoote
 
 export const ForgotPassword = () => {
   const [form] = Form.useForm();
-  const { Content, Footer } = Layout;
-  const { Text, Link } = Typography;
+  const { Content } = Layout;
+  const { Text } = Typography;
 
   const [isLoading, setLoading] = useState(false);
   const [isValid, setValid] = useState(false);
@@ -110,7 +110,7 @@ export const ForgotPassword = () => {
                     onClick={() => history.push(`/resetPassword?token=${token(form.getFieldValue("email"))}`)}
                   >
                     click on this link
-                  </a>{" "}
+                  </a>
                   to reset your password.
                 </Text>
               )}

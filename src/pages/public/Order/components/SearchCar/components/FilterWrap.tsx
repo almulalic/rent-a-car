@@ -33,58 +33,56 @@ export const FilterWrap = (props: any) => {
         <Col xs={24} sm={24} md={24} lg={2}>
           <h1 style={{ color: "white" }}>Filters:</h1>
         </Col>
-        <Col xs={24} sm={24} md={12} lg={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
+        <Col xs={24} sm={24} md={12} lg={4} xl={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
           <Select
             value={props.filter.transmission !== "" ? props.filter.transmission : null}
-            className="selectTag selectTransVal"
+            className="filterTag filterTagFirst selectTag selectTransVal"
             placeholder="Transmission type"
             onChange={(value) => props.setFilter("transmission", value)}
             id="select"
             allowClear
-            style={{ width: "5%" }}
           >
             <Option value="manual">Manual</Option>
             <Option value="automatic">Automatic</Option>
           </Select>
         </Col>
-        <Col xs={24} sm={24} md={12} lg={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
+
+        <Col xs={24} sm={24} md={12} lg={4} xl={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
           <Select
             value={props.filter.fuel !== "" ? props.filter.fuel : null}
-            className="selectTag selectFuelVal"
+            className="filterTag shortTag selectTag selectFuelVal"
             placeholder="Fuel type"
             onChange={(value) => props.setFilter("fuel", value)}
             id="select"
             allowClear
-            style={{ width: "5%" }}
           >
             <Option value="diesel">Diesel</Option>
             <Option value="petrol">Petrol</Option>
           </Select>
         </Col>
 
-        <Col xs={24} sm={24} md={12} lg={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
+        <Col xs={24} sm={24} md={12} lg={4} xl={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
           <Select
             value={props.filter.doors !== "" ? props.filter.doors : null}
-            className="selectTag selectDoorsVal"
+            className="filterTag shortTag selectTag selectDoorsVal"
             placeholder="Doors"
             onChange={(value) => props.setFilter("doors", value)}
             id="select"
             allowClear
-            style={{ width: "5%" }}
           >
             <Option value="4">4 doors</Option>
             <Option value="2">2 doors</Option>
           </Select>
         </Col>
-        <Col xs={24} sm={24} md={12} lg={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
+
+        <Col xs={24} sm={24} md={12} lg={4} xl={4} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
           <Select
             value={props.filter.seats !== "" ? props.filter.seats : null}
-            className="selectTag selectSeatsVal"
+            className="filterTag shortTag selectTag selectSeatsVal"
             placeholder="No of seats"
             onChange={(value) => props.setFilter("seats", value)}
             id="select"
             allowClear
-            style={{ width: "5%" }}
           >
             <Option value="2">2</Option>
             <Option value="4">4</Option>
@@ -93,12 +91,12 @@ export const FilterWrap = (props: any) => {
           </Select>
         </Col>
 
-        <Col xs={24} sm={24} md={12} lg={6} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
+        <Col xs={24} sm={24} md={12} lg={6} xl={6} style={{ marginBottom: width <= 990 ? "10px" : "0" }}>
           <RangePicker
             value={props.filter.reservationPeriod}
             name="reservationPeriod"
             disabledDate={disabledDate}
-            className="rangePickerDate"
+            className="rangePickerDate filterTag"
             onChange={(value) => props.setFilter("reservationPeriod", value)}
           />
         </Col>

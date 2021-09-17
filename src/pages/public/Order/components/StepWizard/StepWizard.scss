@@ -29,11 +29,19 @@
   opacity: 0;
 }
 
+.stepResetModal .ant-btn:hover {
+  border-color: #ffbf00 !important;
+}
+
 .stepResetModal button:first-of-type {
-  color: #ff0033 !important;
+  color: whitesmoke;
 }
 
 .stepResetModal button:first-of-type:active {
+  border-color: #ff0033 !important;
+}
+
+.stepResetModal button:first-of-type:hover {
   border-color: #ff0033 !important;
 }
 

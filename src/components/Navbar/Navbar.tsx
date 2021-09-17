@@ -52,10 +52,6 @@ export const Navbar = () => {
               </>
             ) : (
               <>
-                <Menu.Item key="1">
-                  <UserOutlined />
-                  <span style={{ marginLeft: "7px" }}>My bookings</span>
-                </Menu.Item>
                 <Menu.Item key="4">
                   <PhoneOutlined />
                   <span style={{ marginLeft: "7px" }}>Call Us</span>

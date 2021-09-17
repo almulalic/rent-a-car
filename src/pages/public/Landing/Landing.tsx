@@ -1,7 +1,6 @@
 // import { Layout, Menu } from "antd";
-import { Row, Col, BackTop, Layout, Menu } from "antd";
-import { UserOutlined, LoginOutlined, PhoneOutlined, UpOutlined } from "@ant-design/icons";
-import React from "react";
+import { BackTop, Layout } from "antd";
+import { UpOutlined } from "@ant-design/icons";
 import HeroText from "./Components/HeroText";
 import RentDiv from "./Components/RentDiv";
 import OurCars from "./Components/OurCars";

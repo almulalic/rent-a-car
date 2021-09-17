@@ -31,9 +31,61 @@
   padding-left: 1rem;
 }
 
+.filterTag {
+  min-width: 14vw !important;
+  padding-left: 0 !important;
+}
+
 .rangePickerDate {
-  width: 95.5%;
-  margin-left: 15px;
+  padding-left: unset !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .filterTag {
+    min-width: 13.9vw !important;
+    padding-left: 0 !important;
+  }
+
+  .filterTagFirst {
+    max-width: 100px;
+  }
+
+  .shortTag {
+    max-width: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .filterTag {
+    width: 350px;
+    max-width: 100% !important;
+  }
+
+  .filterTagFirst {
+    width: 350px;
+    max-width: 100% !important;
+  }
+
+  .shortTag {
+    width: 350px;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .filterTag {
+    width: 325px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .filterTag {
+    width: 550px;
+  }
+}
+
+.ant-picker-input > input {
+  padding-left: 6px;
 }
 
 .btnWrapCol {
@@ -44,38 +96,6 @@
 .filterWrap h1 {
   margin-bottom: 0;
   padding: 10px;
-}
-
-@media only screen and (max-width: 1000px) {
-  .rangePickerDate {
-    width: 96.5%;
-
-    margin-left: 15px;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .rangePickerDate {
-    width: 97.5%;
-
-    margin-left: 15px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .rangePickerDate {
-    width: 96.5%;
-
-    margin-left: 15px;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .rangePickerDate {
-    width: 100%;
-
-    margin-left: 15px;
-  }
 }
 
 span.ant-select-selection-placeholder {
@@ -120,7 +140,6 @@ span.ant-select-selection-placeholder {
   }
 
   .ant-picker.ant-picker-range.rangePickerDate {
-    margin: 0;
     /* margin-top: 10px; */
   }
 }

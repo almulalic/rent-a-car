@@ -3,7 +3,6 @@
   padding-right: 10em;
   width: 100%;
   height: auto;
-  background-color: #ffbf00;
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -154,6 +153,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 2vh;
 
   .ant-btn:first-child {
     margin-right: 1rem !important;
@@ -161,6 +161,32 @@
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid #ffbf00;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+  background-color: #ffbf00 !important;
+}
+
+.successfullModal .ant-result-icon span {
+  font-size: 44px;
+}
+
+.successfullModal .ant-result-title {
+  color: white;
+}
+
+.successfullModal .ant-result-subtitle {
+  color: white;
+}
+
+.ant-btn:hover {
+  color: #ffbf00;
+  border: 1px solid #ffbf00;
+}
+
+.ant-btn:focus {
+  color: #ffbf00;
   border: 1px solid #ffbf00;
 }
 

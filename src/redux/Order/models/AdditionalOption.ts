@@ -8,7 +8,7 @@ export interface IAdditionalOption {
 
 export const additionalOptions: IAdditionalOption[] = [
   {
-    label: "Freshly cleaned",
+    label: "Deep clean",
     value: "cleaned",
     description:
       "Every car gets cleaned after customers.If you have any special wishes or you want your car extra clean you can select this option",

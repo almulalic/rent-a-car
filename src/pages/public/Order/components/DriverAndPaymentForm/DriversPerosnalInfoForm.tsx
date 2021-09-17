@@ -16,7 +16,6 @@ export const DriversPerosnalInfoForm = ({
 }) => {
   const Select = select as any;
   const { Option } = Select;
-  const { currentOrder } = useSelector((state: any) => state.order);
 
   useEffect(() => {
     try {
@@ -185,7 +184,7 @@ export const DriversPerosnalInfoForm = ({
   );
 
   return (
-    <Form form={form} {...formItemLayout}>
+    <Form form={form} {...formItemLayout} className="personalInfoForm">
       {/* Full Name */}
       <Form.Item
         name="driversFullName"
@@ -259,7 +258,7 @@ export const DriversPerosnalInfoForm = ({
         <Select
           showSearch
           size="middle"
-          style={{ width: 300 }}
+          style={{ width: "100%" }}
           placeholder="Utopia"
           optionFilterProp="children"
           onFocus={() => {}}

@@ -54,12 +54,6 @@
   padding-bottom: 10%;
 }
 
-.ant-picker {
-  width: 100%;
-  /* border: 0;
-    border-bottom: 1px solid #131416; */
-}
-
 .ant-picker:hover,
 .ant-picker-focused {
   border-color: #ffbf00;

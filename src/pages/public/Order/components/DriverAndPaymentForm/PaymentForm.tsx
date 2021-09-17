@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, Input, Select as select, Button, Card, Radio, Typography, Alert } from "antd";
 import CreditCardInput from "react-credit-card-input";
 
@@ -6,9 +6,8 @@ const formItemLayout = {
   wrapperCol: { span: 24 },
 };
 
-export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
+export const PaymentForm = ({ setAwaitingPaypalPayment, onCreditSuccess }) => {
   const Select = select;
-  const { Option } = Select;
   const [creditCardForm] = Form.useForm();
 
   const [creditCardState, setCreditCardState] = useState({
@@ -18,17 +17,22 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
   });
 
   const handleCreditCardChange = (label, value) => {
-    let state = creditCardState;
-    state[label] = value;
+    let state = Object.assign({}, creditCardState);
+    state[label] = value.target.value;
     setCreditCardState(state);
   };
 
   const onCreditInfoSubmit = async () => {
-    await creditCardForm
-      .validateFields(["cardholdersFullName", "cardNumber", "cvc", "cardExpiration"])
-      .then(async () => {
-        console.log("allgucci");
-      });
+    document.getElementsByClassName("sc-eCstlR NTHBi")[0].innerHTML = "TEST";
+    await creditCardForm.validateFields(["cardholdersFullName"]).then(async () => {
+      if (
+        creditCardState.cardNumber.length != 0 &&
+        creditCardState.cvc.length != 0 &&
+        creditCardState.expiresAt.length != 0 &&
+        document.getElementsByClassName("sc-eCstlR NTHBi").length == 0
+      )
+        onCreditSuccess();
+    });
   };
 
   const creditCardInformationMarkup = (
@@ -45,14 +49,10 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
 
       {/* Card Info */}
 
-      <Form.Item
-        name="cardNumber"
-        label="Card Number"
-        rules={[{ required: true, message: "This field is required!" }]}
-      >
+      <Form.Item name="cardNumber" label="Card Number">
         <CreditCardInput
           cardNumberInputProps={{
-            value: "1234567890",
+            value: creditCardState.cardNumber,
             onChange: (e) => handleCreditCardChange("cardNumber", e),
           }}
           cardExpiryInputProps={{
@@ -72,55 +72,15 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
 
   const [billingInformationForm] = Form.useForm();
 
-  const billingInformationFormMarkup = (
-    <Form form={creditCardForm} {...formItemLayout}>
-      {/* Crdholders full name */}
-      <Form.Item
-        name="cardholdersFullName"
-        label="Cardholders Full Name"
-        rules={[{ required: true, message: "This field is required!" }]}
-        hasFeedback
-      >
-        <Input name="cardholdersFullName" placeholder="John Doe" autoFocus />
-      </Form.Item>
-
-      {/* Card Number */}
-      <Form.Item
-        label="Card Number"
-        name="cardNumber"
-        rules={[{ required: true, message: "This field is required!" }]}
-      >
-        <Input name="cardholdersFullName" placeholder="John Doe" autoFocus />
-      </Form.Item>
-
-      {/* CVC */}
-      <Form.Item
-        name="driversFullName"
-        label="Drivers Full Name"
-        rules={[{ required: true, message: "This field is required!" }]}
-        hasFeedback
-      >
-        <Input name="driversFullName" placeholder="John Doe" autoFocus />
-      </Form.Item>
-
-      {/* Card Expiration */}
-      <Form.Item
-        label="Email Address"
-        name="email"
-        hasFeedback
-        rules={[
-          { required: true, message: "This field is required!" },
-          { type: "email", message: "Please enter a valid email address!" },
-        ]}
-      >
-        <Input placeholder="johndoe@domain.com" id="email" name="email" />
-      </Form.Item>
-    </Form>
-  );
-
   const onReset = () => {
     creditCardForm.resetFields();
     billingInformationForm.resetFields();
+    let state = {
+      cardNumber: "",
+      cvc: "",
+      expiresAt: "",
+    };
+    setCreditCardState(state);
   };
 
   const onSubmit = async () => {
@@ -161,7 +121,6 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
 
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("creditCard");
   const onRadioChange = (e) => {
-    console.log(e.target.value);
     setSelectedPaymentMethod(e.target.value);
   };
 
@@ -190,30 +149,35 @@ export const PaymentForm = ({ setAwaitingPaypalPayment }) => {
 
   return (
     <>
-      <Card title="Credit card information" extra={paymentOptionRadioMarkup}>
+      <Card title="Payment Method" extra={paymentOptionRadioMarkup}>
         {selectedPaymentMethod === "creditCard" ? (
-          creditCardInformationMarkup
+          <>{creditCardInformationMarkup}</>
         ) : selectedPaymentMethod === "paypal" ? (
           paypalMarkup
         ) : (
-          <div>
-            <Alert
-              message="If you want to pay with cash you will need to pay 30% of the price upfront. You will be contacted to pay the fee up to 15 days before the deadline."
-              type="info"
-              showIcon
-            />
-          </div>
+          <>
+            <div>
+              <Alert
+                message="If you want to pay with cash you will need to pay 30% of the price upfront. You will be contacted to pay the fee up to 15 days before the deadline."
+                type="info"
+                showIcon
+              />
+            </div>
+            <br />
+            {creditCardInformationMarkup}
+          </>
         )}
       </Card>
-      <Card title="Billing information"> {billingInformationFormMarkup}</Card>
-      <div className="twoButtonRow">
-        <Button danger type="dashed" onClick={onReset}>
-          Reset
-        </Button>
-        <Button type="primary" onClick={onSubmit}>
-          Next
-        </Button>
-      </div>
+      {selectedPaymentMethod !== "paypal" && (
+        <div className="twoButtonRow">
+          <Button danger type="dashed" onClick={onReset}>
+            Reset
+          </Button>
+          <Button type="primary" onClick={onSubmit}>
+            Submit
+          </Button>
+        </div>
+      )}
     </>
   );
 };

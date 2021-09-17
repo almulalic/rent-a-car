@@ -1,0 +1,88 @@
+.confirmOrder {
+  display: flex;
+  justify-content: center;
+}
+
+.priceSummary,
+.billInfo,
+.pickupDropoff {
+  border: 1px solid #ffbf0098;
+  color: white;
+  height: 100%;
+}
+
+.widthWrap {
+  width: 35%;
+}
+
+@media only screen and (max-width: 1240px) {
+  .widthWrap {
+    width: 80%;
+  }
+}
+
+.pickupDropoff {
+  padding-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.priceSummary ul,
+.billInfo ul,
+.pickupDropoff ul {
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.priceSummary h1,
+.billInfo h1,
+.pickupDropoff h1 {
+  color: #ffbf00;
+  font-size: 22px;
+}
+
+.priceSummaryKey {
+  font-weight: bold;
+}
+
+.priceSummaryValue {
+  font-weight: bold;
+  color: #ffbf00;
+}
+
+.total {
+  color: white;
+}
+
+.totalInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 5%;
+  font-size: 16px;
+  text-align: end;
+  border: 1px solid #ffbf0098;
+}
+
+.totalInfo .ant-btn {
+  width: 100% !important;
+  background-color: #131416 !important;
+  color: white;
+  border: 1px solid #ffbf0085 !important;
+}
+
+.total {
+  // border-top: 1px solid #ffbf00;
+  padding-top: 0;
+  margin-top: 22px;
+  padding-left: 0;
+}
+
+.totalll {
+  border-top: 1px solid #ffbf00;
+  border-bottom: 1px solid #ffbf00;
+  margin-top: 10px;
+  font-size: 22px;
+  padding: 5px;
+}

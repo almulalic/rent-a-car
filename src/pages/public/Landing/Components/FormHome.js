@@ -75,7 +75,7 @@ const FormHome = () => {
       <Row id="body">
         <Col span={24}>
           <Space direction="vertical" size={12}>
-            <RangePicker disabledDate={disabledDate} onChange={setDateRange} value={dateRange} />
+            <RangePicker disabledDate={disabledDate} onChange={setDateRange} value={dateRange} clearIcon />
           </Space>
         </Col>
       </Row>
